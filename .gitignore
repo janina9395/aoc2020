@@ -41,3 +41,4 @@ tm.out
 worker*.log
 /bin
 /.idea/
+.scalafmt.conf
