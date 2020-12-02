@@ -9,8 +9,10 @@ case class Line(rule: Rule, password: String) {
   }
 
   def isValidByNewPolicy(): Boolean = {
-    password.charAt(rule.min - 1) == rule.letter && password.charAt(rule.max - 1) != rule.letter ||
-      password.charAt(rule.min - 1) != rule.letter && password.charAt(rule.max - 1) == rule.letter
+    var count = 0
+    if (password.charAt(rule.min - 1) == rule.letter) count = count + 1
+    if (password.charAt(rule.max - 1) == rule.letter) count = count + 1
+    count == 1
   }
 }
 
