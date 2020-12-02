@@ -20,10 +20,16 @@ object Day2 extends App {
 
   def readFile(filename: String): Seq[Line] =
     Source.fromResource(filename).getLines.map { line =>
-      val args = line.split(":")
-      val rangeAndChar = args(0).split(" ")
-      val range = rangeAndChar(0).split("-")
-      Line(Rule(range(0).toInt, range(1).toInt, rangeAndChar(1).charAt(0)), args(1).trim)
+      line.split(":") match {
+        case Array(rule: String, password: String) =>
+          rule.split(" ") match {
+            case Array(range: String, letter: String) =>
+              range.split("-") match {
+                case Array(min: String, max: String) =>
+                  Line(Rule(min.toInt, max.toInt, letter.charAt(0)), password.trim)
+              }
+          }
+      }
     }.toSeq
 
   val sample = readFile("sample_day2")
