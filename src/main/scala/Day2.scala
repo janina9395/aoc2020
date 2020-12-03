@@ -19,18 +19,25 @@ case class Line(rule: Rule, password: String) {
 object Day2 extends App {
 
   def readFile(filename: String): Seq[Line] =
-    Source.fromResource(filename).getLines.map { line =>
-      line.split(":") match {
-        case Array(rule: String, password: String) =>
-          rule.split(" ") match {
-            case Array(range: String, letter: String) =>
-              range.split("-") match {
-                case Array(min: String, max: String) =>
-                  Line(Rule(min.toInt, max.toInt, letter.charAt(0)), password.trim)
-              }
-          }
+    Source
+      .fromResource(filename)
+      .getLines
+      .map { line =>
+        line.split(":") match {
+          case Array(rule: String, password: String) =>
+            rule.split(" ") match {
+              case Array(range: String, letter: String) =>
+                range.split("-") match {
+                  case Array(min: String, max: String) =>
+                    Line(
+                      Rule(min.toInt, max.toInt, letter.charAt(0)),
+                      password.trim
+                    )
+                }
+            }
+        }
       }
-    }.toSeq
+      .toSeq
 
   val sample = readFile("sample_day2")
   assert(sample.count(_.isValid()) == 2)
