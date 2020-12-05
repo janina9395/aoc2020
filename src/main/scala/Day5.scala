@@ -2,7 +2,7 @@ import scala.io.Source
 
 object Day5 extends App {
 
-  def decodeSeat(code: Array[Char]): Int = {
+  def decodeSeatNaive(code: Array[Char]): Int = {
     var i = 0
 
     def search(fChar: Char, bChar: Char, end: Int): Int = {
@@ -26,9 +26,22 @@ object Day5 extends App {
     row * 8 + col
   }
 
+  def decodeSeat(code: Array[Char]): Int = {
+    val s = code
+      .map {
+        case 'F' => 0
+        case 'B' => 1
+        case 'L' => 0
+        case 'R' => 1
+      }
+      .mkString("")
+
+    Integer.parseInt(s, 2)
+  }
+
   def findSeat(seats: Seq[Int]): Option[Int] = {
     val sorted = seats.sorted
-    sorted.zipWithIndex.foreach { case (i: Int, _: Int) =>
+    sorted.zipWithIndex.foreach { case (i: Int, _) =>
       if (i + 1 < sorted.length && sorted(i + 1) - sorted(i) > 1)
         return Some(sorted(i + 1) - 1)
     }
