@@ -11,17 +11,17 @@ object Day7 extends App {
     Source
       .fromResource(filename)
       .getLines
-      .map(_.split("contain") match {
+      .map(_.split(" bags contain ") match {
         case Array(bagColor, innerBags) =>
           Bag(
-            bagColor.replace("bags", "").trim,
+            bagColor,
             if (innerBags.contains("no other"))
               Map.empty
             else
               innerBags
-                .split(",")
+                .split(", ")
                 .map { s =>
-                  s.trim match {
+                  s match {
                     case colorRegex(num, clr) =>
                       clr -> num.toInt
                   }
@@ -33,15 +33,15 @@ object Day7 extends App {
       .toSeq
   }
 
-  def bfs(root: Bag): Int = {
+  def bfs(root: Bag, bags: Seq[Bag], color: String): Int = {
     val q = mutable.Queue[Bag](root)
     while (q.nonEmpty) {
       val bag = q.dequeue()
-      if (bag.color == "shiny gold" && bag != root)
+      if (bag.color == color && bag != root)
         return 1
 
       bag.innerBags.foreach { case (c, _) =>
-        input.find(_.color == c) match {
+        bags.find(_.color == c) match {
           case Some(innerBag) => q.enqueue(innerBag)
         }
       }
@@ -50,7 +50,7 @@ object Day7 extends App {
   }
 
   def part1(input: Seq[Bag]): Int = {
-    input.map(bfs).sum
+    input.map(r => bfs(r, input, "shiny gold")).sum
   }
 
   def bfs2(root: Bag, bags: Seq[Bag]): Int = {
