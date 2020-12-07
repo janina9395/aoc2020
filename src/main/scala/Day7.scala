@@ -5,9 +5,8 @@ case class Bag(color: String, innerBags: Map[String, Int])
 
 object Day7 extends App {
 
-  def readFile(filename: String): Seq[Bag] = {
+  def readFile(filename: String): Map[String, Bag] = {
     val colorRegex = """(\d+) ([a-z ]+) bags?.?""".r
-
     Source
       .fromResource(filename)
       .getLines
@@ -20,20 +19,17 @@ object Day7 extends App {
             else
               innerBags
                 .split(", ")
-                .map { s =>
-                  s match {
-                    case colorRegex(num, clr) =>
-                      clr -> num.toInt
-                  }
+                .map { case colorRegex(num, clr) =>
+                  clr -> num.toInt
                 }
                 .toMap
           )
-
       })
-      .toSeq
+      .map(b => (b.color -> b))
+      .toMap
   }
 
-  def bfs(root: Bag, bags: Seq[Bag], color: String): Int = {
+  def bfs(root: Bag, bags: Map[String, Bag], color: String): Int = {
     val q = mutable.Queue[Bag](root)
     while (q.nonEmpty) {
       val bag = q.dequeue()
@@ -41,7 +37,7 @@ object Day7 extends App {
         return 1
 
       bag.innerBags.foreach { case (c, _) =>
-        bags.find(_.color == c) match {
+        bags.get(c) match {
           case Some(innerBag) => q.enqueue(innerBag)
         }
       }
@@ -49,11 +45,11 @@ object Day7 extends App {
     0
   }
 
-  def part1(input: Seq[Bag]): Int = {
-    input.map(r => bfs(r, input, "shiny gold")).sum
+  def part1(input: Map[String, Bag]): Int = {
+    input.values.map(r => bfs(r, input, "shiny gold")).sum
   }
 
-  def bfs2(root: Bag, bags: Seq[Bag]): Int = {
+  def bfs2(root: Bag, bags: Map[String, Bag]): Int = {
     val q = mutable.Queue[(Bag, Int)](root -> 1)
     var total: Int = 0
     while (q.nonEmpty) {
@@ -62,7 +58,7 @@ object Day7 extends App {
         total += count
 
       bag.innerBags.foreach { case (clr: String, n: Int) =>
-        bags.find(_.color == clr) match {
+        bags.get(clr) match {
           case Some(innerBag) =>
             q.enqueue(innerBag -> n * count)
         }
@@ -71,8 +67,8 @@ object Day7 extends App {
     total
   }
 
-  def part2(input: Seq[Bag]): Int = {
-    bfs2(input.find(_.color == "shiny gold").head, input)
+  def part2(input: Map[String, Bag]): Int = {
+    bfs2(input.get("shiny gold").head, input)
   }
 
   val input = readFile("input_day7")
