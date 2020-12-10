@@ -13,20 +13,17 @@ object Day10 extends App {
 
   def part1(input: Seq[Int]) = {
     var last = 0
-    var counts = Map[Int, Int]()
+    var counts = Map[Int, Int]().withDefaultValue(0)
     val sorted = input.sorted
-    for (i <- sorted.indices) {
+    for (i <- sorted.indices if (1 to 3).contains(sorted(i) - last)) {
       val diff = sorted(i) - last
-      if ((1 to 3).contains(diff)) {
-        last = sorted(i)
-        counts += diff -> (counts.getOrElse(diff, 0) + 1)
-      }
+      last = sorted(i)
+      counts += diff -> (counts(diff) + 1)
     }
-    println(s"(${counts(1)}, ${counts(3)})")
     counts(1) * (counts(3) + 1)
   }
 
-  // doen't work :-(
+  // doesn't finish :-(
   def part2(input: Seq[Int]) = {
     val sorted = input.sorted
     val queue = mutable.Queue[(Int, Int)]((0, -1))
@@ -39,13 +36,21 @@ object Day10 extends App {
       }
 
       for (i <- ind + 1 until sorted.length; if (sorted(i) - it) <= 3) {
-        val diff = sorted(i) - it
-        if ((1 to 3).contains(diff)) {
-          queue.enqueue(sorted(i) -> i)
-        }
+        queue.enqueue(sorted(i) -> i)
       }
     }
     count
+  }
+
+  // It turned out to be Tribonacci
+  def part2_1(input: Seq[Int]) = {
+    val dev = input.max + 3
+    val sorted = (input :+ dev).sorted
+    var counts = mutable.Map[Int, Long](0 -> 1L).withDefaultValue(0)
+    sorted.foreach { it =>
+      counts += it -> (counts(it - 1) + counts(it - 2) + counts(it - 3))
+    }
+    counts(dev)
   }
 
   val sample = readFile("sample_day10")
@@ -55,5 +60,6 @@ object Day10 extends App {
   println(s"Part1: ${part1(input)}")
 
   assert(part2(sample) == 19208)
-  println(s"Part2: ${part2(input)}")
+  assert(part2_1(sample) == 19208)
+  println(s"Part2: ${part2_1(input)}")
 }
