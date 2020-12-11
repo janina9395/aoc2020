@@ -7,19 +7,10 @@ class PlainGrid(val input: Seq[Array[Char]]) {
   }
 
   def adjSeats(i: Int, j: Int): Seq[Char] = {
-    Seq(
-      (i - 1, j),
-      (i - 1, j - 1),
-      (i - 1, j + 1),
-      (i, j - 1),
-      (i, j + 1),
-      (i + 1, j),
-      (i + 1, j - 1),
-      (i + 1, j + 1)
-    ).filter { case (i, j) => isValidIndex(i, j) }
-      .map { case (i, j) =>
-        input(i)(j)
-      }
+    for {
+      r <- i - 1 to i + 1
+      c <- j - 1 to j + 1 if isValidIndex(r, c) && !(r == i && c == j)
+    } yield input(r)(c)
   }
 
   def countBusy: Int = {
@@ -39,16 +30,10 @@ class PlainGrid(val input: Seq[Array[Char]]) {
   }
 
   def visibleSeats(i: Int, j: Int): Seq[Char] = {
-    Seq(
-      findVisibleSeat(i, j, -1, 0),
-      findVisibleSeat(i, j, 1, 0),
-      findVisibleSeat(i, j, -1, 1),
-      findVisibleSeat(i, j, -1, -1),
-      findVisibleSeat(i, j, 1, 1),
-      findVisibleSeat(i, j, 1, -1),
-      findVisibleSeat(i, j, 0, -1),
-      findVisibleSeat(i, j, 0, 1)
-    )
+    for {
+      dy <- -1 to 1
+      dx <- -1 to 1 if !(dx == 0 && dy == 0)
+    } yield findVisibleSeat(i, j, dx, dy)
   }
 
   def round(
