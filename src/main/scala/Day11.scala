@@ -1,28 +1,121 @@
 import scala.io.Source
 
+class PlainGrid(val input: Seq[Array[Char]]) {
+
+  private def isValidIndex(i: Int, j: Int): Boolean = {
+    i >= 0 && j >= 0 && i < input.length && j < input.head.length
+  }
+
+  def adjSeats(i: Int, j: Int): Seq[Char] = {
+    Seq(
+      (i - 1, j),
+      (i - 1, j - 1),
+      (i - 1, j + 1),
+      (i, j - 1),
+      (i, j + 1),
+      (i + 1, j),
+      (i + 1, j - 1),
+      (i + 1, j + 1)
+    ).filter { case (i, j) => isValidIndex(i, j) }
+      .map { case (i, j) =>
+        input(i)(j)
+      }
+  }
+
+  def countBusy: Int = {
+    input.map(_.count(_ == '#')).sum
+  }
+
+  private def findVisibleSeat(i: Int, j: Int, dx: Int, dy: Int): Char = {
+    var c = '.'
+    var row = i + dy
+    var col = j + dx
+    while (isValidIndex(row, col) && c == '.') {
+      c = input(row)(col)
+      row += dy
+      col += dx
+    }
+    c
+  }
+
+  def visibleSeats(i: Int, j: Int): Seq[Char] = {
+    Seq(
+      findVisibleSeat(i, j, -1, 0),
+      findVisibleSeat(i, j, 1, 0),
+      findVisibleSeat(i, j, -1, 1),
+      findVisibleSeat(i, j, -1, -1),
+      findVisibleSeat(i, j, 1, 1),
+      findVisibleSeat(i, j, 1, -1),
+      findVisibleSeat(i, j, 0, -1),
+      findVisibleSeat(i, j, 0, 1)
+    )
+  }
+
+  def round(
+      seatFunc: (Int, Int) => Seq[Char],
+      busyLimit: Int
+  ): Option[PlainGrid] = {
+    val output = Array.ofDim[Char](input.size, input.head.length)
+    var updated = false
+    for (i <- input.indices; j <- input.head.indices) {
+      if (input(i)(j) == 'L' && seatFunc(i, j).count(_ == '#') == 0) {
+        output(i)(j) = '#'
+        updated = true
+      } else if (
+        input(i)(j) == '#' && seatFunc(i, j).count(_ == '#') >= busyLimit
+      ) {
+        output(i)(j) = 'L'
+        updated = true
+      } else
+        output(i)(j) = input(i)(j)
+    }
+    //println(s"New round, updated = $updated:")
+    //output.foreach(s => println(s.mkString("")))
+    if (updated) Some(new PlainGrid(output)) else None
+  }
+}
+
 object Day11 extends App {
 
-  private def readFile(filename: String): Seq[String] = {
-    Source
-      .fromResource(filename)
-      .getLines
-      .toSeq
+  private def readFile(filename: String): PlainGrid = {
+    new PlainGrid(
+      Source
+        .fromResource(filename)
+        .getLines
+        .map(_.toCharArray)
+        .toSeq
+    )
   }
 
-  def part1(input: Seq[String]) = {
-    0
+  def run(input: PlainGrid, roundFunc: PlainGrid => Option[PlainGrid]): Int = {
+    var in = input
+    var updated = true
+    do {
+      roundFunc(in) match {
+        case Some(out) =>
+          in = out
+          updated = true
+        case None =>
+          updated = false
+      }
+    } while (updated)
+    in.countBusy
   }
 
-  def part2(input: Seq[String]) = {
-    0
+  def part1(input: PlainGrid): Int = {
+    run(input, in => in.round(in.adjSeats, 4))
+  }
+
+  def part2(input: PlainGrid): Int = {
+    run(input, in => in.round(in.visibleSeats, 5))
   }
 
   val sample = readFile("sample_day11")
-  assert(part1(sample) == 0)
+  assert(part1(sample) == 37)
 
   val input = readFile("input_day11")
   println(s"Part1: ${part1(input)}")
 
-  assert(part2(sample) == 0)
+  assert(part2(sample) == 26)
   println(s"Part2: ${part2(input)}")
 }
