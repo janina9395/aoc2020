@@ -42,6 +42,7 @@ class PlainGrid(val input: Seq[Array[Char]]) {
   ): Option[PlainGrid] = {
     val output = Array.ofDim[Char](input.size, input.head.length)
     var updated = false
+
     for (i <- input.indices; j <- input.head.indices) {
       if (input(i)(j) == 'L' && seatFunc(i, j).count(_ == '#') == 0) {
         output(i)(j) = '#'
@@ -54,8 +55,7 @@ class PlainGrid(val input: Seq[Array[Char]]) {
       } else
         output(i)(j) = input(i)(j)
     }
-    //println(s"New round, updated = $updated:")
-    //output.foreach(s => println(s.mkString("")))
+
     if (updated) Some(new PlainGrid(output)) else None
   }
 }
@@ -78,8 +78,8 @@ object Day11 extends App {
     do {
       roundFunc(in) match {
         case Some(out) =>
-          in = out
           updated = true
+          in = out
         case None =>
           updated = false
       }
