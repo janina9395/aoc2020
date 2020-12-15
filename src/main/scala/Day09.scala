@@ -1,6 +1,6 @@
 import scala.io.Source
 
-object Day9 extends App {
+object Day09 extends App {
 
   private def readFile(filename: String): Seq[Long] = {
     Source

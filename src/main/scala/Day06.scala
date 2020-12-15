@@ -1,6 +1,6 @@
 import scala.io.Source
 
-object Day6 extends App {
+object Day06 extends App {
 
   def countAnswersByAnyone(groupInput: String): Int = {
     groupInput

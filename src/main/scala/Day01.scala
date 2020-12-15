@@ -1,6 +1,6 @@
 import scala.io.Source
 
-object Day1 extends App {
+object Day01 extends App {
 
   def readFile(filename: String): Seq[Int] =
     Source.fromResource(filename).getLines.map(_.toInt).toSeq

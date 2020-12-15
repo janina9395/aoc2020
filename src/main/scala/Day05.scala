@@ -1,6 +1,6 @@
 import scala.io.Source
 
-object Day5 extends App {
+object Day05 extends App {
 
   def decodeSeatNaive(code: Array[Char]): Int = {
     var i = 0
