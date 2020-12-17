@@ -70,7 +70,7 @@ object Day17 extends App {
 
 
   def part1(filename: String): Int = {
-    var initState = readFile(filename)
+    val initState = readFile(filename)
 
     def round(state: Map[Point3D, Char]): Map[Point3D, Char] = {
       val points = state.keys
@@ -88,17 +88,15 @@ object Day17 extends App {
       }).toMap.withDefaultValue('.')
     }
 
-    var out = initState
-    for(_ <- 0 until 6) {
-      out = round(initState)
-      initState = out
-    }
-
-    out.values.count(_ == '#')
+    Iterator.iterate(initState, 6)(round)
+      .toSeq
+      .last
+      .values
+      .count(_ == '#')
   }
 
   def part2(filename: String): Int = {
-    var initState = readFilePart2(filename)
+    val initState = readFilePart2(filename)
 
     def round(state: Map[Point4D, Char]): Map[Point4D, Char] = {
       val points = state.keys
@@ -117,13 +115,11 @@ object Day17 extends App {
       }).toMap.withDefaultValue('.')
     }
 
-    var out = initState
-    for(_ <- 0 until 6) {
-      out = round(initState)
-      initState = out
-    }
-
-    out.values.count(_ == '#')
+    Iterator.iterate(initState, 6)(round)
+      .toSeq
+      .last
+      .values
+      .count(_ == '#')
   }
 
   assert(part1("sample_day17") == 112)
