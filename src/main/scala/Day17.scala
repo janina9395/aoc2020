@@ -88,7 +88,7 @@ object Day17 extends App {
       }).toMap.withDefaultValue('.')
     }
 
-    Iterator.iterate(initState, 6)(round)
+    Iterator.iterate(initState, 7)(round)
       .toSeq
       .last
       .values
@@ -115,7 +115,7 @@ object Day17 extends App {
       }).toMap.withDefaultValue('.')
     }
 
-    Iterator.iterate(initState, 6)(round)
+    Iterator.iterate(initState, 7)(round)
       .toSeq
       .last
       .values
