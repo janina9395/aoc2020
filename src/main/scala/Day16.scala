@@ -1,5 +1,4 @@
 import scala.collection.mutable
-import scala.io.Source
 
 case class TicketRule(name: String, range1: Range, range2: Range) {
 
@@ -15,29 +14,18 @@ case class TicketRule(name: String, range1: Range, range2: Range) {
 object Day16 extends App {
 
   type Ticket = Seq[Int]
+  implicit val ticketMapper: Mapper[Ticket] = _.split(",").map(_.toInt).toSeq
 
-  private def readRules(filename: String): Seq[TicketRule] = {
+  implicit val ruleMapper: Mapper[TicketRule] = new Mapper[TicketRule]() {
     val ruleRegex = """([a-z ]+): (\d+)-(\d+) or (\d+)-(\d+)""".r
-    Source
-      .fromResource(filename)
-      .getLines
-      .toSeq
-      .map {
-        case ruleRegex(name, s1, e1, s2, e2) =>
-          TicketRule(name, s1.toInt to e1.toInt, s2.toInt to e2.toInt)
+
+    override def map(line: String): TicketRule = {
+        line match {
+          case ruleRegex(name, s1, e1, s2, e2) =>
+            TicketRule(name, s1.toInt to e1.toInt, s2.toInt to e2.toInt)
+        }
       }
   }
-
-  private def readTickets(filename: String): Seq[Ticket] = {
-    Source
-      .fromResource(filename)
-      .getLines
-      .toSeq
-      .map {
-        _.split(",").map(_.toInt).toSeq
-      }
-  }
-
 
   def part1(rules: Seq[TicketRule], tickets: Seq[Ticket]): Int = {
 
@@ -58,7 +46,7 @@ object Day16 extends App {
       ticket.forall(f => matchSomeRule(f))
     }
 
-    val ticket = readTickets("input_day16_ticket").head
+    val ticket = FileReader.read[Ticket]("input_day16_ticket").head
     val validTickets = (tickets :+ ticket).filter(isValid)
 
     val posRulesPerIndex = ticket.indices.map(i => {
@@ -86,8 +74,8 @@ object Day16 extends App {
     }.product
   }
 
-  val tickets = readTickets("input_day16_other_tickets")
-  val rules = readRules("input_day16_rules")
+  val tickets = FileReader.read[Ticket]("input_day16_other_tickets")
+  val rules = FileReader.read[TicketRule]("input_day16_rules")
 
   println(s"Part1: ${part1(rules, tickets)}")
   println(s"Part2: ${part2(rules, tickets)}")

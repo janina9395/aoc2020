@@ -1,5 +1,3 @@
-import scala.io.Source
-
 case class Point3D(x: Int, y: Int, z: Int) {
 
   def neighbours: Seq[Point3D] = {
@@ -27,10 +25,8 @@ case class Point4D(x: Int, y: Int, z: Int, w: Int) {
 object Day17 extends App {
 
   private def readFile(filename: String): Map[Point3D, Char] = {
-    Source
-      .fromResource(filename)
-      .getLines
-      .toSeq
+    FileReader
+      .readLines(filename)
       .zipWithIndex
       .flatMap { case (line, row) =>
         line.toCharArray.zipWithIndex.map { case (ch, col) =>
@@ -40,10 +36,8 @@ object Day17 extends App {
   }
 
   private def readFilePart2(filename: String): Map[Point4D, Char] = {
-    Source
-      .fromResource(filename)
-      .getLines
-      .toSeq
+    FileReader
+      .readLines(filename)
       .zipWithIndex
       .flatMap { case (line, row) =>
         line.toCharArray.zipWithIndex.map { case (ch, col) =>
