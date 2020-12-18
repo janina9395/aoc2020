@@ -48,7 +48,7 @@ object Day18 extends App {
   def evalExpr(input: String, calcF: String => Long): Long = {
     val expr = input.replaceAll(" ", "")
 
-    def findClosingBraceOfExpr(expr: String): Int = {
+    def findClosingParentheses(expr: String): Int = {
       var balance = 1
       val beg = expr.indexOf('(')
       var index = beg + 1
@@ -64,7 +64,7 @@ object Day18 extends App {
 
     if (expr.contains("(")) {
       val beg = expr.indexOf('(')
-      val end = findClosingBraceOfExpr(expr)
+      val end = findClosingParentheses(expr)
 
       val value = evalExpr(expr.substring(beg + 1, end), calcF)
       val reduced = expr.replace(expr.substring(beg, end + 1), value.toString)
