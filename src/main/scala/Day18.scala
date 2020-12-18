@@ -7,7 +7,7 @@ object Day18 extends App {
   }
 
   def calc(expr: String): Long = {
-    val numbers = expr.split("[\\+\\*]").map(_.toLong).iterator
+    val numbers = expr.split("[+*]").map(_.toLong).iterator
     val operators = expr.toCharArray.filter(s => s == '+' || s == '*').iterator
 
     var res = numbers.next()
@@ -20,6 +20,7 @@ object Day18 extends App {
     res
   }
 
+  // Calculate with + precedence
   @tailrec
   def calc2(expr: String): Long = {
     if (!expr.contains('+'))
@@ -28,69 +29,77 @@ object Day18 extends App {
       val sumReg = """(\d+)\+(\d+)""".r
 
       var reduced = expr
-      sumReg.findFirstIn(expr).foreach {
-        case sumReg(n1, n2) =>
-          reduced = expr.replaceFirst(sumReg.regex, (n1.toLong + n2.toLong).toString)
+      sumReg.findFirstIn(expr).foreach { case sumReg(n1, n2) =>
+        reduced =
+          expr.replaceFirst(sumReg.regex, (n1.toLong + n2.toLong).toString)
       }
       calc2(reduced)
     }
   }
 
-  def eval(expression: String, calcF: String => Long): Long = {
-    if (expression.forall(_.isDigit)) {
-      expression.toLong
+  def eval(expr: String, calcF: String => Long): Long = {
+    if (expr.forall(_.isDigit)) {
+      expr.toLong
     } else {
-      calcF(expression)
+      calcF(expr)
     }
   }
 
-  def evalExpr(exp: String, calcF: String => Long): Long = {
-    if (exp.contains("(")) {
+  def evalExpr(input: String, calcF: String => Long): Long = {
+    val expr = input.replaceAll(" ", "")
+
+    def findClosingBraceOfExpr(expr: String): Int = {
       var balance = 1
-      val beg = exp.indexOf('(')
+      val beg = expr.indexOf('(')
       var index = beg + 1
 
       while (balance != 0) {
-        val ch = exp(index)
+        val ch = expr(index)
         if (ch == '(') balance += 1
         else if (ch == ')') balance -= 1
         index += 1
       }
+      index - 1
+    }
 
-      val end = index
-      val value = evalExpr(exp.substring(beg + 1, end - 1), calcF)
+    if (expr.contains("(")) {
+      val beg = expr.indexOf('(')
+      val end = findClosingBraceOfExpr(expr)
 
-      val reduced = exp.replace(exp.substring(beg, end), value.toString)
+      val value = evalExpr(expr.substring(beg + 1, end), calcF)
+      val reduced = expr.replace(expr.substring(beg, end + 1), value.toString)
+
       evalExpr(reduced, calcF)
     } else {
-      eval(exp, calcF)
+      eval(expr, calcF)
     }
   }
 
   def part1(filename: String): Long = {
-    readFile(filename).map(s =>
-      evalExpr(s.replaceAll(" ", ""), calc)
-    ).sum
+    readFile(filename).map(evalExpr(_, calc)).sum
   }
 
   def part2(filename: String): Long = {
-    readFile(filename).map(s =>
-      evalExpr(s.replaceAll(" ", ""), calc2)
-    ).sum
+    readFile(filename).map(evalExpr(_, calc2)).sum
   }
 
-  assert(evalExpr("2 * 3 + (4 * 5)".replaceAll(" ", ""), calc) == 26)
-  assert(evalExpr("5 + (8 * 3 + 9 + 3 * 4 * 3)".replaceAll(" ", ""), calc) == 437)
-  assert(evalExpr("5 * 9 * (7 * 3 * 3 + 9 * 3 + (8 + 6 * 4))".replaceAll(" ", ""), calc) == 12240)
-  assert(evalExpr("((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2".replaceAll(" ", ""), calc) == 13632)
+  assert(evalExpr("2 * 3 + (4 * 5)", calc) == 26)
+  assert(evalExpr("5 + (8 * 3 + 9 + 3 * 4 * 3)", calc) == 437)
+  assert(evalExpr("5 * 9 * (7 * 3 * 3 + 9 * 3 + (8 + 6 * 4))", calc) == 12240)
+  assert(
+    evalExpr("((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2", calc) == 13632
+  )
 
   println(s"Part1: ${part1("input_day18")}")
 
-  assert(evalExpr("1 + (2 * 3) + (4 * (5 + 6))".replaceAll(" ", ""), calc2) == 51)
-  assert(evalExpr("2 * 3 + (4 * 5)".replaceAll(" ", ""), calc2) == 46)
-  assert(evalExpr("5 + (8 * 3 + 9 + 3 * 4 * 3)".replaceAll(" ", ""), calc2) == 1445)
-  assert(evalExpr("5 * 9 * (7 * 3 * 3 + 9 * 3 + (8 + 6 * 4))".replaceAll(" ", ""), calc2) == 669060)
-  assert(evalExpr("((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2".replaceAll(" ", ""), calc2) == 23340)
+  assert(evalExpr("1 + (2 * 3) + (4 * (5 + 6))", calc2) == 51)
+  assert(evalExpr("2 * 3 + (4 * 5)", calc2) == 46)
+  assert(evalExpr("5 + (8 * 3 + 9 + 3 * 4 * 3)", calc2) == 1445)
+  assert(evalExpr("5 * 9 * (7 * 3 * 3 + 9 * 3 + (8 + 6 * 4))", calc2) == 669060)
+  assert(
+    evalExpr("((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2", calc2) == 23340
+  )
+
   println(s"Part2: ${part2("input_day18")}")
 
 }
