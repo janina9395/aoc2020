@@ -1,380 +1,431 @@
-6 * ((5 * 3 * 2 + 9 * 4) * (8 * 8 + 2 * 3) * 5 * 8) * 2 + (4 + 9 * 5 * 5 + 8) * 4
-2 + (3 + 3 + (9 + 3 * 4 * 9) + 2 + 5 * 7) * 7 * (3 * 6 * 5 * 9 + 6) + 6
-3 * (7 * 7 + 5 * 2) + 7 * 8 * 9 * 6
-9 + 3 * (3 + 3 * 2 + 4) * 2 * (5 + 9 * 9 * (2 + 5 * 2 * 4) * 6)
-2 * 3 * (2 + 7 + 3 + 7) + 3 + 7
-(4 + (4 + 7 * 6 * 5) + 6) + (3 * 2 + 2) + 3 + (8 * 5 * 6) + 9
-(2 + 3 + (8 + 9 + 4 * 8) * (5 * 3 * 7 + 9 * 5 * 8) + 6) * 9 + 6
-(4 + (6 * 5) + 4 + 7 + 7) + (2 + 3) * 2
-2 + 9 + 7 + (8 + 7 + 2 * 4 * 8 + 2) + (3 + 5 * 5 * (7 * 7 * 2 * 7)) + ((6 * 6 + 7 + 9 * 9 * 7) + 4 + 3)
-7 + ((8 + 4) + (4 + 9 + 9) + 3 + 3) + 7
-9 + 9 * 6 + 6
-(7 * 7 * 7 * 3 + 2) * 5 * 7
-3 + 6 + ((9 * 6 * 7 + 9 + 8 * 6) * 5 * 5 * (8 * 6 * 9 + 6)) * 8 * 9 + 8
-4 + (7 * 7 + 9 * (5 + 4 * 3 * 4 + 6 + 7) * 6 * 2)
-3 + 5 * (4 * 8) * 9 * (2 * 5 * (5 + 9 + 5 * 8 + 6 + 6)) * 5
-3 + (8 + 2 * 6 * 7 + 5) + (2 * 2 + 5 * 8) + 6 * 9
-((9 * 5 + 9 + 5 + 8 * 2) * 5) + (7 + 6 * 2 + (5 * 9 * 9) * 3) * 5 * 4 * 9
-9 * 9 * (3 + 6 + 4 * (3 + 3 + 7 * 6 + 4 * 6)) + 2
-4 + 5
-8 * (3 + 3) * 9 * ((9 + 2 * 2) * 3 * 8 + 7) + 7 * 3
-(5 * 7 + 5 * 9 + 7) * 5 + 5 * 3 * 8 * 6
-(6 + 7 + 6 + 8 * (6 * 8)) * 8
-4 + 3 + (7 * 7 * 2)
-(8 * 7 * (7 * 2 * 2 * 8)) + 4
-4 * (4 + 6 + 7 * 2 * (6 + 6 + 3 + 6 * 2 * 5)) * 9 + 7 + 6 + 8
-9 * 8 + (7 * (8 * 7 * 4 + 8 * 6 + 2) + 7 * 9) + 8 + 2
-(9 + 7 * 8 * 8 * (7 * 4 * 7 * 2 * 6 + 2) + 6) * (2 + (2 + 2 + 2 * 5 + 5 * 9) + 5 + 8 + 6)
-4 + 2 * 7 * (9 + 8 + 3 + 9 * 4 + (8 + 7 * 6 + 7)) + 4
-7 * 9 * 8 * (5 * 4 + 8 + 2 + 2 + 4) * 5
-4 * 4 * (5 * (6 * 2 + 9)) + 5 * 3
-2 + 2 * (5 + (9 * 7 * 8 * 9 * 8 * 2) * 6 * (4 + 6 + 6 + 6)) + (3 + 9 + 6 * 2)
-2 + ((3 * 4) + 2) * 9 * 4 + 4 * 3
-(4 + 2 + (5 * 6 * 2 + 7 + 8 * 2)) * 6 * 8 * (2 + 3 * 2 * 8)
-9 * 2 + (5 * 7 + (3 * 9 + 2 + 2 + 5)) + 8
-4 * 9 * 7 + ((5 * 4 + 6 * 3 + 3) * (8 * 6 * 3 + 9 * 8 + 7))
-4 + (9 * 7 + 4 + 6 + 5 * 2)
-7 + 4 * 9 * ((8 + 8 + 8 * 6) * (5 + 2 * 2 * 5 + 8 * 5) + 5 + (8 + 4 * 2 * 5 + 6) + 6)
-(7 + (2 + 7 + 8 + 4 + 9 + 4) + 9 * 4 + 5 * 5) + 6 + ((7 + 7 * 5 + 3 * 3 + 3) * 6)
-((4 + 7 * 9 + 5 * 4 + 8) * (7 * 9 * 3) + 7) + (5 * 2)
-9 * (8 * 8 * 2) * 2 * 5 * 4 + 6
-9 + ((9 + 5 + 9) + 2 + 4 + 8) * 3
-3 + (2 + 5)
-9 + (2 + 4 + 4 * 9 + (7 * 2 + 3 * 8 + 3 * 2) + (4 * 6 * 9 + 7)) + 7
-(7 + 6) * (4 * 5 * 4)
-(9 * 2 * 7 + (7 * 3 + 4 + 6 * 3 + 9) + (9 + 6)) + 4 + 8
-5 * ((6 * 2) * (9 + 7 + 7 + 2)) * (3 + 9 * 6 + 2 * 3) + 4 + 7
-6 + (9 + (8 + 6 * 4 + 7)) + 2 * 8 * 7
-4 + (8 + 4 * 5 * (2 + 2 * 4) + 7) * 2
-3 * 5 * 2 + 4 * 6 + 9
-(7 + (2 * 7 * 4 + 5)) * 4
-6 + 5 + ((7 + 6 * 4 + 7 + 5 * 5) * 5) * 8
-7 * 3 + 4 + 9 * (7 + (9 * 5 * 7 * 3 + 8 * 2)) + 6
-(6 * (2 + 8 * 2 + 2) * 2 * (5 * 7)) + 8 + (4 + 4 * 7 + 8 + 8 + 9) * (6 + 7)
-6 * (2 * 6 + 6 * 3 + 5 + 8) + 6 + 3
-8 * (8 * 3 + 9 * 7) * 7
-6 * 7 + 8 * (8 * 9 + (5 + 8 * 5 + 6) * 6 * 2) + 7 * 3
-((9 * 4 * 4) + 4 * 2) + 3 + (9 + 3 + 8) * 3 * 2
-7 + (2 * 4 * (2 * 6 + 8) * 8) + 8 * 5
-6 * 4 * 5 * 8 * (9 * 8)
-6 * (6 * 3 * 9 * (2 + 3 + 2))
-3 * 9 + 6 + 5
-2 * (7 + 8 + 9 * 9 * 7) + 4 * 6 * ((8 * 3 * 2 * 3 + 9 + 9) + 3 * (8 * 5 + 3 * 5 + 7 + 9))
-6 + 9 * 7 * 8 + (9 + 5 + 8 * 4 + 4 * 8)
-6 * 5 + 2 + (4 + (8 + 7 * 6 * 9 * 2 * 3) * (8 * 6 * 4) + 5 * (7 * 8) * 2) * 9 * 2
-4 + (3 + 8 * (2 * 8 + 9 * 6) * 6)
-((3 + 7) * 9 * 9 + 9) * 7
-2 * 9 * (4 * 9 * (9 * 8 + 6 * 5) + 3)
-7 + 4 + 3 + 7 + (8 + 4 * 8 + 8 + 8) * 8
-6 * (7 * 6 * (2 + 8 + 9 + 4) * (8 * 2) * 4 + (7 * 9 * 3 * 3 + 2 * 6)) * 6 + 8 + 5
-6 * 6 + 8 + 7
-3 * ((8 + 6) * 4 * (8 + 7 * 7 * 7) + 8 * 7 * 5) * ((9 + 9 + 3 + 7 + 4) * 7 + 4)
-4 * 4 + 5 + 5 + 7
-4 + (6 + 4 + 9)
-7 * 3 + (5 * 6 + (5 * 3 + 7 + 2)) * 9
-4 * ((2 * 4) * 6 + 8) + 6 * 5 + (8 * 9)
-2 * (3 * 4) + 2 + 2
-(2 * 4 * 5 + 2 + 4 * 5) + 5 + 3 * 6
-9 * 2 * 6 + 3 + (3 + 8) * (6 * 4 + 2)
-9 * 6 * 4 + (9 * 8 * 5 * 6 + (5 * 6)) + 9 * 7
-9 + 2 * 6 * (9 + 3 + (5 + 2 + 3 + 8 * 2 * 6) * 9) * 7 + 9
-8 + (7 * 2 + (3 + 6) * (6 + 6 + 8)) + 8 * 5 + 4
-3 * (3 * 2 + 5 * 4 + (8 * 3 * 5) + (6 * 5 * 8 + 7 * 4 * 5)) + 6 * 6
-6 + 7 + 7 + 2 + (2 + (4 * 3) + 3 + 8)
-((2 + 3 + 2) * 9 + 2 * 4 * 7 + 9) * 8 + 7 * 4 + 3 + 2
-(5 + (7 + 9 * 3 * 6 + 5 + 8) * 2) * 7
-3 + 3 * 3 + (6 + 7 * 3 * 2 * 5 * 7) + (4 * 6 * 5 + 3 * (3 + 6 + 5 + 5) + 8)
-4 * 5 + 8 + (5 + 6) + (4 + 2 * 2 + 4)
-5 * 6 * 8 * (3 * 2 + 7 + (4 * 8 * 3) * 3 + 3)
-5 + 8 * 6 * 4 * (2 * 4 + (3 + 6 + 9 * 6 * 2 * 6) * 9 + 3 + 9) + 9
-(6 + (4 + 5 * 8) + 8 * 9) + 7 * 2
-(5 + 2 * 3 * 3 * 2 * 8) + 3 + 2 + (7 + 4) + 4
-(9 * 8 * 2) * 2 + 2
-8 * 6 + 3
-6 + 9 * (9 + 2) + (7 + 7 + (5 * 9 * 4) + (2 * 6)) + 5
-5 + 7 * 7 * (7 + 8 * (7 * 9 + 2 * 6 + 9) + 3) * 6
-2 + (5 * 3 + 7 * 5 * 3 * 3) + 6
-4 + 9 * 8 * (4 * 8) + (3 + 5) * (8 * 5 + 6 + 9)
-(5 * 6 + (7 + 3)) + 3 + 9 + 7 + 7
-(8 * 5 + (3 + 6 * 2 + 3) * 8 + (7 * 3 + 7 * 4 + 9) + 9) + 7 + (8 + 2 + (7 * 7 * 3) * (4 * 5 + 4 * 9 * 8)) * 5 * (3 + 8 * 4)
-2 * 5 + (6 + 8 + 8 * 7 * 7 + (7 + 3 + 9 * 6 + 7))
-2 * 3 * ((7 + 6) + 8 + 6 * (4 * 3 * 7) * 7) + 3 * 9 * (8 + (2 + 9 + 9))
-8 * 8 * (3 + 8 * 3 * 5 * 5 + 3)
-(7 * 4 + 7 * 6 * 6 * (2 * 6 + 7)) * 3
-8 * (3 * (5 + 8 * 8 + 7 + 2)) + 8
-4 + (7 * (9 * 2 + 2 * 7) * 7 + 4 + 9 * 4) + 3
-5 + 3 + 5 + 2 * ((9 * 9 + 2 * 3) + 2 * (3 * 8 + 8 * 7 * 6 + 7) + 9 + 5)
-5 * 5 + 9 * (4 * 9 * 9 * 3) + 9 + (7 + 9 * 8 * 2)
-7 * 7 + (7 + 2 * (9 + 6 * 3 + 2 + 3) + (2 * 6) + 6) * 2 * 5
-(7 * (2 + 6 + 2 + 9) * 7) + (8 * 2 + 4 + 6 * 2 + 3) + 3
-3 + 3 * 6 * ((3 * 5) * (8 * 6 + 4)) + ((9 + 2 + 5) + (4 + 2 + 2 * 3 + 5 + 6) + 7 + 5 + 6) + 5
-5 * 9 + 9
-(5 + 3 + (4 + 4) + 7 + 7 * 9) * ((7 + 7) * 5 * 7)
-7 * ((7 + 5) * 2 * 7) * 7
-9 * ((6 + 4) * (6 * 5 * 8 + 6 * 2 * 3)) * 8 + 5
-3 + 2 + 5 * 5 + (8 + (8 * 2 + 9 * 7 * 4)) * 2
-(6 + 2 * 5 + 3) + 9 * (5 * 6 + (7 * 6 + 8 + 4 + 8) + 8 + 8)
-(3 + (3 * 4 * 8 * 3 + 6 + 8) + 9 + 8 + (3 * 9 * 9 + 4 * 8 + 9) + (7 + 6 + 9 + 6)) + 8 + 5 + 2 * 7
-6 * (7 + (2 + 5 + 5 * 6 + 4) * 6 * (2 * 5 * 7 * 4 * 7 * 4)) * 9 * 2
-3 * (7 * 4 + 7 + 9) + ((4 * 4 * 2 * 8) + 9 + 6 * 9 * (9 + 9 + 2 * 2) * 5) + 5 * 6 + 9
-6 + (4 * 5 + 8 * 8 * 9)
-((9 * 2) * 2 * (4 * 8 + 4 * 8) + 6 + 6) * 2
-(5 * (3 * 2 * 2 + 4 + 4) + 6 * (8 + 6 * 3 + 6)) * (3 * 7 * (5 * 9 * 7 + 5 * 6 * 2) + 6) + 2 + 8 * ((9 + 5 + 4 + 8 * 5 * 4) + 3) * 5
-8 * 4 + 8 + 6 * ((4 * 3 + 5 * 6 + 5) * 2) * 3
-3 * (2 * 8 * 8 * 7 * (2 + 7) + 8)
-(9 * 8 * (4 + 8 * 3 * 7 * 6 + 8)) + 7
-9 * ((6 * 5 + 6 * 5 * 2 * 2) + (8 + 6 + 3 + 4) + 6)
-2 * (8 * (5 + 9 * 4 * 5) + 9 * (5 + 5 + 8 * 4) + 8 * 5) + 4 * 3 + 3
-(9 + 3 + 9) * (7 + 9 + 7 + 4 + (3 + 4)) * 2
-(9 + 7 + 8 * 5) + 3 * 4 * 2 + 3 * 6
-(7 + 3 + 3 + 2 * 9) + (6 + 6 + (7 + 4 * 5) + 6 + 3) * 8
-5 * 7 * 9 + (6 * 9 * 7 * (3 + 4) + 4 + 6)
-(3 + 4 + (8 + 5 * 6) * 9 * 6) * 6 * (8 + 7 * 8) * 3 + 2 * 5
-7 + (8 + (3 * 4) + (4 + 9 + 9 * 7 + 4) + (2 * 2 + 7) * (6 * 9)) + (9 * (7 * 4 + 5 + 2 * 3) + 3 + 7) + 8 + 2 + 7
-(6 + 8 + 4 * 8 + 9 + 2) * 3 + 4
-3 + 7 * (4 * 3 + 2 + 3)
-(5 + 8 * (8 + 2 + 3 * 9) + 9 * 7 + 2) * 8 * 7 + 3 + 5
-(6 * 2 + 4) + 4
-6 * (2 + (5 + 2 + 9 + 8 * 7 + 6) + 7) + 4 * 7 * 4
-4 * 6 * ((9 * 2 * 6 * 4 * 2) * 5) + 9
-(9 * (3 * 2 + 5 + 9 + 3 * 6) + 5 * 5) + 5 * 3 * 6
-(9 * (3 + 6 + 2 * 4 + 8 + 2) * 8) * 9 * 2 * 3
-2 + 6 + (7 + 9 + 7 + (6 + 5 * 8 + 3 + 7) + 8) + 3
-(4 * 6 * 3) + (6 * 9 + 3 + (3 * 8 + 9 * 9 + 5 + 8) * 8 * 7) + 4
-7 * 9 + ((8 + 8 * 2) * 7 + 5 * 2 * 8) + 8 + 9 * 6
-3 + ((6 + 9 + 9 * 8 * 5 + 6) * 3) + 4 + (3 + 5 * (6 * 8 * 7 + 5 * 3) * 2 * 7) + (9 * 5)
-3 + 6 + (5 + 2) * 6 * 8
-(4 + 4 + (8 * 6 * 5 + 5 + 9 * 9) + (7 * 3) + 9) * 7
-3 * 5 * 8 * 9 + 4
-7 * ((3 + 2) * 9 * (4 * 4 + 5 + 7) * 7)
-7 * 5 + 8 * ((8 + 3 + 5 + 3 + 4) + (6 * 7 + 6) + (3 * 9 * 7 + 6 * 6) * (7 * 7 + 9 + 9 * 9)) * 7 + ((3 * 9 + 7 + 6) * 5)
-(9 * 5) * 6 + (7 * (3 * 6) * (8 + 6) * 8 + 6)
-3 * 5 * 2 * 8 * (5 + 6 + 6) + (9 + 2 * 5 + 4 + 4 + 9)
-(2 * 8 * 5 + 5) * 4
-7 * (9 * (4 + 4 * 6) * 5) * 5 * 4 + 5 * 7
-(6 + 2 + 2 + 4) + 4 * 9 * (6 + 3 * 4 * 9) + 2 * 8
-6 + 9 + 9 + (5 + (5 * 3 + 7 * 9 * 3) * 7 + 8 + 3) + 4
-(5 * 9 * 7 + 8) + 2 * 7 * 2 * 8
-4 + 2 * 5 * 2 * 3 + 7
-5 + 6 * 2 + (3 + 2 + 8 * (3 * 6 * 5 * 2 * 2)) + ((8 * 3) + (2 * 9 + 4 + 9 + 7 * 5) + 4 * 9 + (6 + 7 + 5 + 4) + (9 * 8 + 2 + 9 + 2))
-((8 * 5 + 6 + 9 * 4 * 6) + 2 + (8 + 9) + 3) + 2 * 2 + (4 + 6 * 9 * 4) + 2 * (3 + 3)
-2 + (3 + 3) * (2 * (4 + 4 + 2 * 9) + 9 + 9 + 8 * 9)
-3 + (7 * 4 + 5 * (4 * 9) + (7 * 5 * 4 + 7 * 7 + 6)) + 8
-5 * 5 * (6 * 3 * 9) * 9 + 6 * 7
-9 + 5 * (7 * (2 + 8) + 6) + 8
-3 + 3 * (8 + 2) * 2
-5 * (8 * 7 + (9 + 4 * 7 + 7 + 2) + (4 + 3 + 5 * 2) * 5 * 5) * 2 * 6
-4 + (5 * 5 * 2 * (3 * 5 + 5 * 5) * 5) * 7
-5 + (7 * (9 * 3 + 9 * 3 + 5 * 8) * 9 * 3 * 5 * 7) * 7 + (6 + 4 * 8) + 9 * 2
-6 * 7 + 4 + (2 + 2 * 4 + 9 * 4 + (5 * 5 + 4 * 5 * 6))
-2 + (4 + 3 * (6 * 4 + 2 * 4) * 5 + 8 * 6) + (6 * (9 * 4) + 5 + 4 * 7)
-4 + 6 + 6 + (5 + 3 * (3 + 4 * 8) + 9)
-7 + 7 + 5 + 8 + ((2 + 2 + 5 + 2 * 5) * 3 * 8 * 9)
-3 * (5 + 4 + 3) * (4 + 2 * 5 + 8) * 6 + (4 * 9 + 2 + 6) * 5
-(9 + 7 * 9 * 2 * 7) * 7 + 2 + 4 + 8 * (7 * 9 + 9 + 8)
-(7 * 7 * 5 + 4 + 3) + 9 * 8 + 9 + 4
-(2 * 3 * 8 + 6 * 6 * 7) * (7 * 5 * (8 + 6 * 3 * 4 * 7 * 8)) * 3 * (7 * 4 * 7 * 8)
-((4 * 5 + 4) + 8 * 3 + (9 * 9 * 4)) * (7 * 9)
-6 * (4 * 9 * 9) * (5 + (5 * 8 * 3 + 3) * 9) * 8 * 3 + 6
-(4 + 8 + 9 * 7 * 7) * 5 + (2 + 9 + 5 + 5) + 3 * 7
-2 * 6 + 8 * (2 * 6 * 8)
-5 + 7 * 2 + 7 + (3 * (7 * 9 + 7) + (9 + 3 * 5 * 9 * 5 + 7) + 8 * 5)
-8 + 3 * 9 * 6 + 9 * 2
-5 + (6 + (7 + 5 * 4 * 4) + 6)
-(3 + 9 + 9 * (6 * 3 * 8 * 9 + 4)) + 2 + 9 * 3 * 8
-(2 * (9 + 3 * 8 + 9 + 7) + 4 * 6 * 7) + (9 + 4 * (2 * 8 * 2 + 3 + 6) * (5 * 2) + (6 + 4 + 6 + 5 * 3 * 9) + 8) * (8 * 2 + 9 * 6 * 8) + 6
-4 + (4 + (7 + 9) * (7 * 7 * 6 + 3 * 8) + 6 + 9) * 5 * (5 + 9 + (6 * 8 * 8 * 2 * 2 + 6) + 3 + 6 * (4 + 7 * 7))
-4 + 8 + 9 + 3
-9 * 7 + 9 * 3 * ((8 * 7 * 4 * 5) * 6 * (6 + 6 + 4 + 8 + 4 + 6) * 9 * 6 * (2 * 5 * 8)) + 6
-(3 + 8 * 6 + 8 * 9) + 2
-7 + 8 + 5 + 3 + 6
-2 + 4 + 4 * 4
-((8 * 8 * 9 * 4 * 8) + (4 + 6 + 7 * 2 * 4 + 6) + 9) * 4 * 6 * 7
-9 * (6 + (3 + 5 + 9 * 6) + 9 * (2 * 2 * 9) * (8 + 5 * 4 + 4 * 2)) * 9 * 6 * 2
-4 + 9 + 2 + 6 + 5 * (7 * 3 + 7 * 6 * 7 * 4)
-5 + 9 * 6 + (6 * 6 + 8) * (6 * 3 * 3 * 7 * 5)
-8 + 9 + (7 + 3 + 4 * 9) + 7
-2 + ((5 * 9 + 7 + 4 * 6) * 5 * 3) + 5 * 9 * ((5 * 7 * 2) + 4 + 5 + 4) * 5
-8 + (2 * (4 * 3 + 2 * 7 * 6) + 5 * 6) + (7 + 3 + 8 * 9)
-3 + (7 * 3 + 6) + (3 * (7 * 5 + 5 * 3 * 7)) + 9 + 6
-8 * 9
-3 * 3
-6 * 7 + 6 + 2 + 6 + (5 + (3 + 4 * 9 * 2 + 9) + 9 + 9 * 3 + 7)
-4 * ((4 * 3 + 8 * 3 * 7 + 9) + 3) * (5 + 9 * 6 + (6 + 7)) + 2 + 6 * 7
-(2 * 8 + 9 + 2 + 4 + 6) + ((3 + 3 * 7 + 7 + 2 * 9) * 4 + 9)
-3 + 4 * 8 + 7 * (3 * 5 + (5 * 6) * 3)
-5 * ((2 + 9 * 5 + 3 + 8 * 9) * 8 * 2 + 7 + 5 * 5) + 7 + (7 * 6 * 4 * 2 + 5) * 2
-2 * 3 + 2 * 4 * 6 + 2
-3 * 4 * 6 + 7 * (4 * (5 * 7 + 8 * 2) * 4 + 5 * 6 + (2 * 2 * 2))
-(6 + 5 + (8 + 4 + 2 * 5 + 5 + 4)) + ((8 + 8) + 6 + (4 + 6)) + 7 * (3 + 2 + 9 + 2 * 9) + 8
-2 * 6 * 3 + 6 * (4 + (4 + 4 + 7 + 8 + 9) * 8 * (4 + 8 * 4 + 5 + 9) * 7) * 3
-8 * 8 + 8 + 3 * 7
-4 + 9 * ((9 * 3 + 7 * 2) * 8) * (7 + 5 * 9)
-6 + 2 * (7 + (9 + 3 * 4 + 8 * 2) + 7)
-4 * 5 + 6 + 6 + 6 * (4 * 8 + 7)
-(8 * 2) * (4 * 4 * (8 + 3 * 3 + 8 * 8) * 6 * 4)
-2 + (9 + 4 * 7 + 9 * 2 + 8) + 8 + 5 + (4 * 2)
-((5 * 3) + 3 * 8 + 9) * (9 * 8) * 3
-((9 + 4 * 5 + 8 + 5) * (7 * 4 * 9 + 4 + 7 + 8) * 4 + 9) + 4
-3 * (2 * 2 + 9 * (2 + 5 + 6 + 4) * 4) + 6 + ((8 * 3 + 6 + 9) * 5 + 4) + 6 * (9 + (2 + 3 + 8) + (3 + 7 * 3 * 3 * 4 + 8) + 4)
-((9 * 2 + 3 * 6) + 2 + 7) + 7 + ((5 + 3 * 4 * 2 + 7 * 9) * 9 + 7 * 2) + (3 + 9 + 5)
-2 * 3 + 2 * (2 + 7 * 2 + 3) * 6 * 7
-(9 * (4 * 7 * 8 + 9 * 5 + 6) + 6 * 5 + 9) * (6 + 8 + 6 * 9 + 8 + 9) * 9 + 2 + 2
-7 + (2 * 4 + 4) * 3 + 8
-2 * 6 + ((8 * 7 * 2 * 3 * 5 * 3) + 5 + 5 + 4 * (6 * 7 * 9 + 5) * 7) + 2
-8 + (8 + 6 + 8 * 2) * (2 * 9 + 5 + 2)
-8 + (8 + (4 + 3 * 6)) * 6 * 6
-5 + 5 + (4 + 2 * 8) + 9 * 5
-(8 + 6 * 9 * 7 * 9) * (7 * 3) * 8 + 4 + 6
-((5 + 4 + 3) * (5 * 4 + 9 * 2 + 9) * 4 * 2 * 3) + 3 + 6
-(7 + 9 * 5 + 5) + (8 * 3 * 3 * (6 * 3 + 8 * 6 * 9 + 5)) * 5 + (2 * 8 * 2 * 8)
-6 + (9 * 6 + 7 * (3 * 3 + 2) + 4 * 4)
-(9 + 4 * (2 * 4) * 5) + 9 * 7 * 7
-(7 + 6 + 4 + 6 * 8) * 7 * 3 + (4 * 9) + 3 + 5
-6 + 7 + 4 + 7 * 6 * (3 + 5 * (5 + 4 * 9 + 5 + 6) * 7 + 9)
-((8 * 5 * 3) + 5 + 3 * 8 + 3) + (7 + 6 * 7 + 6 * (7 * 8 + 4)) + 4 + 8 + 4
-8 * 5 + (7 * 4 * 2 + 5 + (3 * 6 + 8 + 3) + (5 * 3))
-7 * 9
-5 + 6 * 4 * 5 * (2 + 3 + 5 + (4 + 9 + 8 * 8 + 7) * 5 * (7 * 7 * 6 + 5))
-5 + 7 * (3 + 6) * ((3 + 6 + 6) * (8 + 6 * 6 * 4 + 7 + 2) + (2 + 9 * 2 * 6 * 3 + 9) + 7 + 7) + ((7 + 3 * 3 * 7 * 4) + 2 * 2) * 7
-6 * 3 * ((8 * 8 + 7 * 8 * 4 + 5) + 9)
-2 + (7 + (6 + 7 + 9 + 2 * 9 + 2)) + 4 + (4 * 6 * 3) + 3
-5 * 6 + (2 + 8 + 9 + (6 + 8 + 3) * 2) + 8
-5 + (4 + 8 + 7 * 7 + 3 + 8) * (4 + 4 * 3 + (9 * 5 * 4 * 9) * 9) * 5 * ((6 * 4) * (4 * 6 + 9 + 9 + 8) * (8 + 3 + 2 + 7 * 9) + 6) + 2
-3 + (4 + 4 * 6 * 4 + 6 + 3) * (5 + (7 * 6 * 4 * 6 + 9 * 8)) * (9 * 7 + 5 * 2 * 4 + 8) + 9
-6 + 3 * (3 + 3 * (9 * 4 * 3 * 9 * 7) * 3 + 4) * 3
-4 * 3 * 3 * 4 * 2 + (2 * 3 * 9 * (9 * 9 * 6) * 6)
-9 + 4 + (7 + 6 + (3 + 4 * 7 * 3) + (5 * 8 + 9 + 6) * (4 + 8 * 4 + 6) * 8) + 8 * (2 + (5 + 5))
-7 + 6 + 5 + 2 + 2 + 8
-(6 * 2 + 6 + 5 * (9 * 4)) * 8 + 5
-5 + 2 + (6 * 4 + 3 + 3 * 3 + 9) * (9 + 2 * 2) + 9
-6 + (9 + 7 * 7 + 3 * 7 * 2) + (8 * 5)
-9 * (3 * 6 * 2 + 5) * 4 + 6 * (3 * 8 + 9 * 2 + 8 + 9) + 2
-6 + (9 * 2 * 3 * (3 * 8 + 7 * 4))
-8 + (6 + 6 + (2 + 8 * 9) + 7 + 6 * (6 + 8 * 2)) * (9 * 7) * 3 + 3
-(4 * (6 * 8 + 3 * 8 * 5) * 8 + 3 + (8 * 9 * 3 * 3)) + 5 * 7 * 9 + 9
-7 * 5 * (5 * 9 * (6 * 2 * 4) + 8 + 9) * 7 + (8 * 7 + 7 + (7 * 4) + 7) + (7 + 3)
-8 * (5 * (5 + 2)) + 5 + 6
-8 + 9 * (3 + (3 * 7 * 2))
-(5 + 3 * 8 * 7) * 2 + 5 * 9
-7 * 4 * 2 * 5 + (7 + 8 + 4 + 9 * 8 * 8) * 3
-7 * 8 + 7 * 8 * 2
-(9 + (3 + 5 + 3 * 8 + 8 + 3)) + 8 + 6 * 5 + (5 * 2 * 3 + 3 * (2 * 7 * 4 * 4 + 7 + 4)) + (7 + (8 + 4 * 4 + 9 + 8 * 9) * 7)
-4 + 4 + 8 + ((5 * 3) * 8 * 3 * 4 * 7) + 5
-2 + 9 * (5 * 6 * (7 * 5 + 4 + 7) * (9 * 2 * 7 * 7 * 2 + 7) * 4)
-9 + (6 * 6) * 2 + 2 * 8 * 2
-4 + 2 * (2 * 9 * 4 * 2 + 9 + 4) + (7 + 4 + 8 + 9) * 8 + 5
-7 * ((5 * 9 * 8) * 8) + 6 + (7 * 5 * 4 * 6 * 5) + 6 * 3
-7 * 8 * (7 + 3) * 2 * 9 * 2
-9 + ((7 * 9 * 7 + 5 * 8 * 9) * 2 + 6 * 9 + (4 * 3 + 8)) + 2 * 9 * 3 + 5
-6 * 2 + (7 + (4 + 8 + 7 + 6) * 2 + 7 * (7 + 3 * 8 * 5)) * 6
-(9 * 8 + 3 * 9 * 5) * 9 + 3 * 5
-8 + (7 + 2) + (9 + 9 * 7 + 3 * 4 + 6)
-7 + 8 * 4 + 8 * (8 * 4) * 8
-(3 * 4 * 2 * (2 + 2) + 9) + 8 + 9
-5 * (9 * 6) + 7
-2 + ((9 + 4 * 7) + 5 + 2 + (4 + 4 + 7 + 4 * 4) + 7 * 4) + 6
-((6 + 3 + 6 * 8 + 8 * 6) + 5 + 6 + 2 + 7 + 5) * ((9 * 6) + 2 * 3 * 8)
-(5 + 7 + 3 + 6 + (9 + 2 + 3) + 4) * 6 * (9 + 5) * 2 + 6
-4 * 6 + 4 * (9 * 4 * (3 + 5) * 8 + (7 + 8 + 9 + 3)) + 4 * 4
-9 * 4 + 8 + 9 * (4 + 6 + 9 + 2 + 4)
-(8 * 5) * 6 * 6 + 8 + 5
-(7 + 4 + 7 * 3 + 7 + 7) * 2
-9 + 5 * (4 * 2 + 4 * 9 * 3)
-5 * 6 * 2 * ((6 + 8 * 5 * 7) + (2 + 7 * 5 + 7) * 7 * 2 * (3 * 2 + 6 * 7 * 3) + 5) + 3 * 3
-6 * 2 + 7 + 5 + 5 * ((7 + 2 * 7 + 6 + 2) * 4)
-((8 * 3 * 4 * 7 * 8) * 9 * 8 * 2) + 8 * 9 * (3 * 9) * 3 * (2 * 6 + 7 + 9 * 4)
-2 + (4 * 4 * 8 * (4 + 8 * 3 * 2 * 9 + 4) * 5 * (7 * 7 + 3 + 2 + 3)) * 5 + 6
-5 + 5 + 9 * (8 * 9 + 9 * 9 + (2 + 9) + 9) * 2
-(5 * 6 + 8) + 9 + (2 * 6 + 5 + 5 * (3 + 9 + 2) + 2) + 3 * ((3 * 7) + 8 * 5) + (3 + 2)
-(9 * 7 + 4 + 2 * (2 * 2 + 3 + 8)) + 6
-4 * 5 * ((7 * 7 * 2 + 5 + 9 * 4) * (9 + 4 * 7 + 8) * 8 * 3)
-9 * 4 + (8 + (4 + 8 + 3) * 6 * 9 + 3 * 7) * 5 * 4
-8 + (7 + 3 * (8 * 6 * 8 + 7 * 8) + (6 * 2 * 3 + 7 * 9))
-(6 * 4 * 4 * 8 + (6 + 6)) * 8 + 2 + 4 + 9 * 7
-7 + (9 + 5 * (2 + 5 + 8 + 2 * 2 * 4) * 2 + 6) + 5 + 6 + 3 * (6 * (9 + 3))
-2 * (8 * 4) * 7 + 3 * 9
-3 + 6 + 2 + 6 + 3 * (3 + (2 * 6 + 6 * 3) * 6 + 2 * (7 * 7 + 7))
-6 + 2 * 7 * (8 * 5 * 8 * 9 + 8)
-2 * 8 + 3 * (5 * 6 + 3 * 2 * 5 * 8)
-(7 + (5 * 8 + 5 + 4 + 9) + 4 + 3 * 3 * (9 + 5 * 3 * 7 * 6)) + 3 + (6 * 2 * 3 * 4) + ((2 * 2) + 9 + (9 + 3 + 6 * 9 * 4 + 4) + 8)
-(8 * 5 + (3 + 3 * 5 + 9 * 2) + 4 + (5 + 5 + 7 * 3) + 6) * ((2 + 2 * 4) * 3 + 5)
-9 * 9 * (3 + 2 + 7 * 2 + 6 * 5) + 2 + 4 * (2 + 3 * (8 * 4) + 2)
-(6 * 8 + (5 * 7 * 6 + 3 + 4 * 4) + (6 + 7) + 9) * (7 * 7 * 5 + 4) + 2 + 9 * 9
-4 * 9 * 2 * (7 * 3 * (6 + 8 * 5))
-8 + 2 + 2 * (7 * 9 + 4 + (4 + 5 + 3 * 7 + 4 + 8)) + 4 * 2
-(4 + (7 * 3) * 8 * 2) * 5 * 9 + 9 * 4 + 3
-(6 * 6 + (8 * 4 + 3 + 2 * 6) * 6) * 5 * 2 + 7 * (6 + (7 * 3)) + (6 + 6 * (6 * 9 * 8 + 3 * 3) * 3)
-(8 + 8 + 5 * 6) + 7 + 4 + ((9 + 7) * (2 * 9 * 2) * 8) + 5
-5 * 9 * (8 * (9 * 8 * 4) * 9 * 8)
-7 + (3 * 6 + (6 * 2 * 9) * 2)
-7 + 9 + 6 + (6 + 4 + 7) + 4
-3 + 6 * 3
-2 * 7 * 7 + (2 + 2 + 7 + (5 * 9 * 2 * 7 * 9)) + 5 * 9
-2 * (2 + 7 * 2 * (5 + 7 + 7) * 7) + 8 + 5
-9 + 7 + 5
-8 + 8 + 3 * 2 * 5 * (5 * (6 + 9) * (4 * 5 * 8 * 2 + 4))
-7 + 8 * (6 * 8) * 8 * (3 * 2 + 8 + 5 + 8 + 8)
-7 * 8 * (2 * 3 + 9 * 6) * 8 + ((9 * 3 + 9 + 3 * 9 + 6) + 7 * 2 + 9 + (7 + 3 * 9 * 6) * (5 * 6 + 4 * 2 + 4 + 3))
-3 * 9 + (4 * 6 + 3 * 3 + 4 * (5 * 5))
-((5 * 9 + 7 + 9) + 4 + 9 + 8 + 8 + 5) * 9 + (8 + 7 * (4 * 5 + 5 * 7 + 7)) + 4 * 2 * ((4 + 9 * 6 + 2) * 3 * 2 * 8 * 9)
-4 + 6 + 3 * (8 + 9 + 9) * 7 + 5
-((5 * 8 * 9 * 9 + 5) + (5 * 8 * 5 * 3 * 8) * 5 * 3 + (6 * 6 * 8 + 2 + 5 + 6)) + 2 * 6 + 3 + 3 + 2
-7 * 6 * 3 + (6 + 7 * 3 + (7 * 8 * 7 + 9 * 7) * 7) * 7 + 4
-(7 * 4 + 8 + 8) * (3 * 9 + 9 + 9 + 9 + 7) * (6 * 6 * 3 + 8 * (6 + 3 + 8 + 7 + 3)) * 2 + 5
-(9 + 3) * 5 * 9
-((2 + 2 + 7 * 2 * 4) + 5 + 2 + 5) * 5 + 2 * 7 + (6 * (6 + 8 * 5 + 6) * 5 * 6 * 3) + 8
-(8 * 4 * 9 + 7) + (8 + 4)
-8 * (4 + 5 + (9 * 2 + 8 + 4 * 8) * 2) + 8
-(9 + 9) + 5
-7 * (7 + 3 + 7) + 5 + 8 * 3
-(6 * 6 * (3 + 4 + 6 + 7 + 5 * 2) * 4 * 2 * 7) + 2 + (4 * 8 + 8) + 2 + 7
-2 + 5 * 5 + ((3 * 7 + 5 + 2 * 3) + 5 * 2 * 6 * 8)
-9 + 9 * (2 + (9 + 4) + 9) * 8 + 3
-7 * 5
-7 + 5 * 7 * (9 * 8 * 7 * 5) * 8
-(8 + (5 + 2 + 8 * 7 + 8)) + 3 + 2 + 9 + (8 + (9 * 4 + 4 * 4 * 3) + 4 * 4) + 9
-(7 * 8) + (6 + 4 * 9 + 8 + 4 + (6 + 6 * 8)) * (2 + 6 * 3 + (3 * 2 * 7 + 2) * 5 + (4 * 4 + 7 + 4)) * 9
-3 * 9 * ((3 * 7 * 8 * 9) + 7 * (7 + 5 * 9 * 7) * 8 + 4 + 2) + 9 * 5
-(8 * 6 * 3 + (9 + 5)) * 4 + 9 * 7 + ((6 * 7) + 9 + 8 + 9) + 3
-8 * ((4 + 8) * 7 + 8 + 2 * 8) * 5 * 7 + (6 + 3 * 6) * 9
-((6 + 2 * 7 + 2 + 9 * 5) * 5 * 9 + (7 * 7)) * 9 * 2 * 6 + 4
-8 + (7 * 8 + 6 * 8 * 5) + 2 * (4 + 4 * 9 + 9 + 9) * 3 * 8
-9 * ((9 + 3) * 3 * 3 * 5 * 2 * 5) * 5 * (8 * 3 * (6 * 4 * 6 * 7 * 9) + 2)
-9 + 6 + 7 + 6 * ((2 + 8 * 6 + 7 + 6) + 6 + (9 + 9 * 9 + 5)) * 8
-(7 * 4 + (4 + 5 + 2 + 3)) + 7 * 7 * 3 + 3 * (5 + 4 + 2 + 3)
-(4 * 6) + 6 * 8 + 3 + 8 + (5 * 7 * 5)
-(9 + 2 * (6 + 4 * 9 + 7) * 3) * 4
-(8 + 2 * 4 * 7 * (9 * 4) + 4) * (3 + 4 * 5) + (4 * 2 * 8 * (6 + 6 + 9) + 3 * (6 + 6 + 7 + 3)) * 3
-3 * 5 + 6
-5 + 2 + 8 * 6 + (4 + (9 * 3) * (6 + 9 * 6 + 3 * 7) + 4 * 5 + 8)
-(3 + 5 * (6 * 2 * 5 + 3 + 2)) * 8 * 7 * 7
-7 * 2 + 8 * ((6 + 2 * 6 + 8 + 9 + 3) + 6 * 4)
-7 + 7 + 3 * 6 + ((2 * 9 * 2 * 5 + 6) + 6 + 6)
-(9 + 4) + 3 + 5 * ((9 + 4 * 8 * 5) + 7 + 3 + 6 * 6 + (5 * 5 + 6))
-(8 + 4 + 2) + (7 + 2)
-6 * (4 * 9 + 7 + 8 * (8 + 8)) + 5 + 6 + 5 * 9
-3 * (4 + 8 + 2 + 2) * 9 + 5 * 4
-(5 * 8 * (9 * 4 * 7 + 3 * 3 * 8) + 5) * (6 + (3 * 3 * 3 * 4)) + 4 * ((7 * 3 * 4 + 3) * 4 * 8 * (9 + 3) + 4)
-4 * ((8 * 8 + 6 + 7 * 6) * 9 * 5 * 5 + 4)
-(3 + 7 * 8 + (7 * 7 * 7 * 7)) * 6 + 8 + (8 + 5) + 8 + 5
-(7 * (8 * 3 + 3 + 8) + 2 * 8 + 6) * 8 + 6
-4 + (3 * 6 + 5) * (6 + 3 + (6 + 8 + 6 * 9 * 8) * (3 * 6) + 6 * 3)
-6 + (9 * (7 + 9 * 6 + 9 + 8)) * 9 * 8 * 5 * (9 + (3 + 4 + 2 + 9 + 6) * (3 * 5 * 2 + 6 * 8 * 6) + (8 + 7 * 6) + (7 * 4 * 8 * 7 + 3 * 9) + (3 + 7 + 9))
-3 + 9 * 7 + ((9 + 8 + 3 * 2) + 6 + 5 + (4 + 8 * 5 * 4 * 7) + (9 * 3 * 8))
-4 * 2 * 2 + (6 + 8) + 6
-3 * 7 * (8 * 3)
-5 + 5 + 6 + (2 * 5 * 5) + (6 + 6)
-9 * 6 * (3 + (6 * 2 + 4 + 8 * 3) * 6 + (3 * 9 * 9 + 9)) * 9
-(3 * 3) * 8 * 2 * 3 * 2 * 8
-((4 * 5 * 3) * 8 * (9 * 2 + 4 * 3 * 7 * 6) * 9) * (6 + 6 + 6 * 8) + 8 + 5 * 2
-7 * (5 * 7 + 4 + 8) * 2 * 4
-(6 + 3 * (2 * 8 + 4 + 2 + 9 + 6) + 7) * 3 * 2 * 9
-9 * (8 + 9 + (9 + 8) * 5) + (4 + 3 * 7 + 5 + (6 * 2 + 5)) * 2
-(5 * 7 + 6 + (3 + 3) + 9) + 6
-8 + (6 * (6 + 7 * 3))
-(7 + 7) * 3 + 5 * (9 + 7 + (5 + 9 + 2) * 3 * 7)
-4 * (3 + 8 + 2 + 3) * 8 + (7 * 6 * 9 + (4 * 7 * 5) * 3 * 3) * 5 + 7
-4 + 7 * (9 + 5 * 2 * 2 * 2 + 7) * 2
-4 + 3 + 5 + (6 * (5 * 7 + 2 * 7)) + 4 + (2 * 8 + (3 + 2 + 3 * 2) * 5 * (2 * 2))
-6 + 6 + 2 + 6 + (9 * 2 * 9)
+baabababbaababbbaabbbbab
+baabababbbabaabaabbbbbbb
+bbbabaaababbbbaaababbabbaabbabba
+bbbbbbaaaababbaaaababaaabbaaababaaababba
+bbabbaaaabbbabaaaabbbbbbabbbbbaa
+aaaabaaabbbabbaaaabbbbbabaabbbaabbbaaaabbababbbb
+bbbabababbbbbbbbbbbbabbbababbaba
+aabbbbaaabbabbabaaaababaabbbabbbbabbaaabaaaaabbbbaaababbabbbbbbabbbbaaababbbbaab
+bbababbaaabbbbbbabaaaabbbbbbabba
+babaaaabbaaabbbabaaaaabb
+bbbabaaabaaabbbabababbaaabbbbbabababababaaaaaaba
+bbaabaabbbaaaabaabaaabaa
+bbaabababbaaabbbaaaaabaabababbbbbaaabbaa
+babbbbaaaaaaaabbabbabbba
+bbbbbbabababbabbbbbbbbba
+bbaaababbaaabbbbaababbbababaaaabaabbbaaaabbbabbabaaabbab
+bbaaaabaaabbbaaabbaaabaa
+baabbbaababbbbaaaaabbbbbbaaababbbbbbaaba
+abbabbbabaaaaaaabbabaaabaaabababbabaaabaaabbbaaa
+aababaaababbbaabababbabbabbbabbbbaaaababaabbabab
+ababbbbaaaaaaaabababaabb
+ababbbaaaaaabbabbaaabbabbabbaabbaabaaaab
+bbaabaabaaabbaaabbbbbbbb
+babaababbbbbbaaabbababba
+bbaabbaaaaaabbbbabbbabbbabaabbabababaaba
+bbbbbaaababbabaabbbaabbaaabbbbababbabaabaaaaaabaaabababaaaaaaaabaaaaababbbbbaabababbabbb
+aabbbabababbaaabbbbaaaabbabbbbbbabaabaab
+abbbabbaabbbababbbababbabaabaaabbababbab
+baaaabaaaaabbababbaaaaaabababbbbabbbbababaaaaaaaabbbabab
+aabaabababbabbbbbaabbaabbbaabbba
+aaaabbbbabbabbabbaabbaabbaaaababababaaaabaabaabbabbbbbaabaaaaaba
+bbbaaaabbaabbaababbabbbaabaababbbbaabbbbbbaabaaaabbbbaabaaaaabba
+babbaabbaaaabbababaaabbabababbaaabbbababbbbbaabb
+aabbbbaaabbbabbbabbababa
+aaabaabaabbaaaabababaaabababbaabbabaaabbabaababaabbbaaab
+aabbbabbbaababbbbbaaabaaaabaabaabaabaabbbaabbbaabbbaabba
+bbaabbaababbbaabaaaaaabbbbbbbbba
+ababbabbabbbaabbabaababaaaaaaaaabbbaabaabbbabbba
+bbbabbabbabbbabbabbaaaaabbabbbabbbaaababababbabbbaaaaaaaaaababaaaabaabaaabbbababbbbaaaab
+babaaaabababaaaabbabaaaababaababbabaabbabaabaaabaabbabba
+aaabaabaabbbaabbbbbbabbababbabab
+baababbbbabaabbaabbbaaaaabbabbbabbaabaabbababbaabbabbbbaabbbbbbb
+ababbaababbabbbbbaababaaababbaba
+baabbbabaaabbaababaaaabbbabbbaaaaaaaabaaaabbbbabababaabbabaaaabb
+bbbaaababbbbbbaabbbbabbb
+bbbaaaabaabaababaaabbaaaabbabbaaaaaaabbbaaabbabbbbabbaababbaaababaaabbaa
+aabbbabaaaaaabbbabbabbba
+aaaaaaabababbbabaabbbbba
+aaaaaaaaababbbaababababbbbbabbbbabababaaabababaabbbbbaba
+bbaaaaabababaababbbaabbababbaaababbabababbababbaabbababbabaababaaabababbbbbbaaba
+bbaaaabbaaaaaaaababbaaaa
+aaaaabaababaababaaababaa
+babaabbbbaaabbbabbabbbbbbaaabbababaaabaababbaaaa
+bbbbbbaabababbaaaaabbbbabaabbaba
+abaaabbbaababbaaaababbbbbbaaaaababbabaaabbbaababaaababaa
+abbabbbabaaabaabaabbbabbbabbbabaababaaaaaaaaaaabbbbabaaaabbababbbaaaaaaababbabbbabbbbaab
+aababbaaaaabaababbbaaabababbababbbbaabbbbabaabbbabaabbaa
+bbaabababbbbaababbaaabbabaaaaabbbabababa
+aabbbabaabbbaabaaabbbabaabaababababbaaba
+bbabbaabbbbbbbbabbbbbaaaaabbaaabbbbabbbbbaaabbabbbbbbbbbbbbbbaababbaaabbaaaababbbbbbaaab
+abbbababbbaaaaaabbbabbabbbbabbabbbabaabb
+aababbaaabbbaabbababbaaa
+abbabbbbbbbbaababaaabbbb
+aaabbbaaaaabbbabbabbaaaa
+ababbbbbabbabaabaaaaabaaabbabbaabbbbbaaa
+aaaabbbabbbbababbbababbaabbbaabbaaababba
+aaabbbabbbaabaababbbaaabbaaaababaabbabaababbabaa
+baaaabaabaaabaabababaaba
+abbbabbbabbbabbaaaabbaab
+bbabbabbbaaaababbbaaabbaabbabbbbaabbbaaaabbbaabbaabbababababaaba
+abbabbaaaababababaabbbaa
+ababbbaabaaabbbabbbabbab
+bbaaabbbbaaaaaababbbaababbabbbaabbaaaabb
+bbabbabbaabbababbaabbabaaaabaaaaabababaaaaabbaab
+bbaababaaaabbbaaaabbbbabbbabaabb
+bbababbaabaabbbababaababaabaaaab
+bababaaaaaaabbbabbbbaabaabbbabaababbbabbababaaba
+babbaabbbbbbababbbabbbbbbaaaaaabbabbabaaaaabbabb
+babbbabbabaaabbabbbbaaaa
+aaaabbabbbababbabbaaaabaaaabbbaa
+abbbaabaaababaaaabbabbbbbbbaaaaabbabaabbababbaaabbbbbbbabaabaabb
+abbbabaaababaaaaaabaababbbababbaaabbabaabbbbaaabbbbbbaab
+babbaabbbbbaababbaaabbbbabbaaaaa
+babbbbbbbbbabaaabaabbbba
+bbbaaabaabaaaaabbaabbababbaabbabbabbababbabbbabaaabbabab
+aabbbaaaababbaabbbabaaab
+bbbbbbaaababbbaabaababba
+bbabbbbbbbabaababbbabbba
+babbabaababbbaaababbabababbbaabbbbaaabbbaaaabbababaababb
+ababaaaaaaaaaaabbbaaaabbbaabbbbb
+abbbaaaaaaaaabbaababaabb
+baabaabaaabbbabaabbabbabaabbbbba
+abaaabbbbbabbbbbbbbaabbbbbaaaabbbbbaabbbbbabbbababbaabaa
+aaabbbaaababbbbabbbbabbabaabaabb
+abbabbbbbababaaababbabababbabbbbbaaaaaabbbaabaaaaabaaabb
+ababbabbaabbaaabaaababbb
+bbbabaaaabaaaaabbaabbaabbbaababaaaaaababaaabaaabbbbbabaa
+babbbababbbbbbabaaabaabababbbbbbbaaabbbb
+aababaaaababbbaaababbbaababbbaaabbbaabbaaababbba
+ababbbbaaabbbaaaaabaababaaaaaaaaabbababababbaaba
+aabbaaababbabbaaaaabbbaa
+bbbbaaabbaabbababaabbbabbbabaaabbbabbabababaabab
+babaababbbbbabababbabbbbbbbbaaaa
+abbbabaaabaaabbbaaabbbaaaaabbabaabbabbaaaabbaabaaabaaabaabbbbabbbabaaabbaababbaabbabaabb
+aaabbbbaabbbababababbabbabaaabbabaabaabb
+aaabbbaabbbbababbbaababb
+baabababbbbabbbabbaabbababbbaaabaaababbb
+bbbabaaaabaaaaabbbababab
+baaaaabbbabbabbbbbaaaabaababbbbaabaabbabbbaaabbaababaaba
+abbaaaabaaabbaaababbabababbbaababbbbbbaabbbbbaaa
+baabbbabaababaaaabbababa
+aabbbabbabaaaaaabbbbbaba
+aabbbbaaaaaaababbaabbbaababbabbbaaababbbabaabbbbbabbaaaa
+aabbaabbbabaaaabbbabbaab
+aabbaaaaabababbbabaaaaaabbbababbaababababbaabbabaaabaaaababbbbab
+bababbaaababaaaabbbbbbbb
+aaaaababbbaaaabbbbaabbab
+baabbaaaaabbbaaabaaababa
+bbbabbbabbaabaaabbbbaabbbbabbbaabbbaaaababbababbbaabababbaabaaab
+bbababababbababbbaaabbaaabbabababbbbbbaabaababaa
+aababbaabaaaabbbabababaa
+aaabbaaabbbaaaabbbbbaaaa
+bbabbabbabbaaaababbababa
+bbbabaaaaaabbaaaaabbabbbaaabbabaabbabaaa
+aaaaaaaabbaababaaabbbbaabaabababbbbbbaab
+babbaabaababaabaabababaabbbbbbba
+aababaaaababbbbbbabbabababababaaabbbaaab
+baabbbaabbbbbbbbabbaabbb
+baababbbabbabbabaaaaaababaaabaaa
+ababbbababbbbbabbaabbbaa
+bbaababaaabbbbaaababaaababbababa
+bbabbaaaabbabbbbaaabaaab
+abbbabbabbabaabaaaaaaabbabbbbbbbbbbbbaaa
+abbaaabbbbaaabbbbaababbbaaaabaab
+bbaabababaaabbbaabbaabbb
+ababbabbaaabaabaaaaaaaabababaaababaaabbbaabbabaabbbbbaba
+aababababaaaababbabaaaababaaabbbbaaaaaba
+babaaabaabbbbbbbabbbbbbbbaababaabbaaabaa
+bababbbabaabbbabaaabbbaaaaabaababaabbbaabbbbbbba
+ababbbabbbaaaabaabaabaaa
+ababbbbaaabbaaabaababbbbaaaaaaaaabbababb
+bbaabaabaaaabbabaaaaaaabbabbaaaaabbbbbbb
+aabaaabbababbbabaaaabaabbbaababb
+babbbbabaaaabababaababbabaaaabbabbabaaabaaabbbbbbbaabbbb
+babbaababbbbbbbabbabaabbbbabbaaaababaaaa
+baabaabababbbbabbaaabaaaabbbaabaaabaabbabbbbabbbabaaaabababaaaabbbbbbabb
+bbbabaabaabbbabbbaabbaabaabaabba
+babbbababbabbabbabbbaabaaaaabbbbbabaabbbabaaaabbbaaabaaa
+aaabbbaababbbaaaaaabbbbaaaaaabbbaaaabbaaaababbbabbbabbba
+babbaabbababbbbaaababbaabbaaaaaa
+abaababaabbbabaaaaabbaba
+abbabbabaabaaaaaaaabbaba
+bbbbbbaaababbbbaabbaaabbaababbbaaaababbb
+abbaaabbbbbbababaabaaaaaaaaaababbbbabbaa
+abbbabaaaabbaabbaaabababbbbbaaaa
+bbbababbaababbbbbbaaabbbbaabbababaaaaabb
+abbaababaabbbabbabababab
+ababbaababaaabbbbababaaaaabababaaaabaabb
+aaaaababbabbabaababbabba
+aabbaababbaabaaaaaabbabababaaaaa
+bbabbabbaabaabbbbababaaabbbababbababaabb
+babaaababbababbabbbbbbaabbbaaaaabbaaaabbbaaaaabb
+aaabaabaaaaaabbbaaaabababaaabbbbbbbbabbbbaababababaabbbaabaaabaabbabbbba
+baabababbabaaaabababaaabbaabbbba
+abaaaaaababbbaababbbbbba
+baabbaaabaabbbabbbabbbaa
+ababbbbbabaababaaabbabba
+abbaaabbbabbaaabbbbbbaaa
+ababaaaaaabbaabbbbbaaaaaabaabbbabbbabaabbababbabbbbbaaababbbbaab
+aabaaaaaaaaabaaabababbbaababaabaaaaabbababaabbababbaaaabbbabaaba
+babaabababababbbaaabbbaaaabaaaabaaaabbbbaaababaaaababbaabaabaaabababaabb
+ababbaabbbabbaababbababa
+ababaaabbbaaabaabbbababbbaabaaabaabaaabb
+aabbbabaaabaabababaaabbaaaabbabbaaababbb
+baaabbabbbaaaababaaabaabbaaaabbbabbaaaabaaaabaabbaaabaaa
+baaaababbaabbbbaaaaabbba
+bbababbaaabaababbbbbbaaa
+bbbaaabaabaaabbabaabaaaa
+aabbbbaabaababbaaaabbaab
+ababababbbbabbbaabbbbabbbaaababb
+abbaaabbbaaaabbabbbbbaba
+aababbaaaaaaababbabbaaba
+abbaaabababbaabaaaaaaabaabbaabaabaabaaababaaaaba
+abaabbbababbbbaabbbbaabb
+abaaabbaaaaabbbbaaabaaaa
+bababbbbbaabbbbbbababbababbbbaba
+abbbabbbabbaaaabbabbbaaaaaabaabababbbbbaabaaabab
+ababbbbbbabbbbabaaaaabba
+baaabbabbaaaaaaaaabbbbaabbbbbaba
+aabaaabbabbaabbabaabaaabbabbababaaabbaabaababaab
+abbbbabbaaabbaaaabbbbbaaababbbbbbbbaaabbbabbaaab
+ababbaabbbbabaaaabaabbaa
+abababbababbabaabbaaaabaaaaaaabbaaaaaaabaababbababababbbaababbba
+aaaaababbaababaaabbbaaababbbbaabbbbabbbaababbaaa
+bbaaaaabbabbaabbbbbbbbba
+ababbabbabaaabbbaabababa
+bababbbaabbaaaaabbbbbaab
+abaaaaaabababaaabaabaabaaaaabaaa
+abaaabbaaababaaabbbbbabaababbbbbababaabababbbbbaabbbabbbabbaaabaababbaabbaabbabb
+ababaaaabbaabaaaabbabbba
+bbbabaaabbbabaaaabaaaaabbababbaaabababbb
+bbabbabbbaaaaaabbbbbbbbb
+bbbbbbaabbaabaabaaabbabb
+bbbabaaabbabbabbaabbabba
+aabaababaaaaaaaaaabbbabaabbbabbaabbbbaabbbbbaaaa
+abbaaabbaaabbbbaaababbab
+abaabababbbabaabbaaaabaaaaabbabbabaabaaa
+babbbaaabaabbaabbbbaabbbabbbabbababbbababbbabbaa
+aaaaaabbbbbaaababbaababb
+abbaaabbbbbbabbabbaabbab
+bbbbabbaabaababaaaaabababaaaabba
+baaababbbbaaabaaaabababbbbaabbbbbbababab
+babbbbababbbabbbaaabaaab
+bbaaabbbbbbaabaaaabbbbbbababbbabaaababbabbbbbaba
+bbabababbababbbabbbbbaabbaababbbbbaababaaabbabbababbaaaaababbbbabaaabaabbbbabbaaaabbbaba
+bbaabbbababbbbbbbaaabababbaaabaabbababbaabaaabaababbbaabbbbbbbba
+baaaabababbaaaaabbabbbbabbbababb
+aababbbbbabbaabbbbaaaaabaabbabbabaaababa
+babbbbaaababbbabbbbbabababaaaaaaabbaaaba
+babbaabbabbabbabaaabbbaabababaaababbabbaaababaabbabbabbb
+bbaabaabaabaabbbababaabb
+aaaabbbababbababbabbabaaaaabbbbabbbababbbbbabbbbbaaaaabb
+aabbbbaababbbbababbbbabbbaaabaaa
+aaabbbbbabbbaaabbaababaa
+babaaaabaabbbaaabbaabbaa
+aaaaabbbaaabbbbabaaabbabbabbbababbabbbab
+bbbbaababaabababbabbabbb
+abbaababbbaaaababbbaaabaaabbabaa
+ababbaabaaabbbabbaabaaab
+baababbbabaaaaaaabbbabbabbabbabaaababbba
+baaabbbaaabbbaaababbabaabbbbbaba
+bababbbbababbbbababaababbaabbbaabaaabbbbababaababbbbabbbbabaaababababbaababbbbaa
+abbaaaaabbbbbbababbbbaaa
+bbaabbababbbbaaaabaabababaaaabbababababbbbababbb
+abbbabbaabbaaabbaaabbaba
+aaaabbbababbbbabaababaab
+bbaabbaaabaabbbababaaaabbbaabbbabbbabbab
+babbbbbbbbababbaabaababb
+bbbbabbbaaabbbbbaaaabaabaababaababaabbbb
+babbbabbaababbaabaaaaabb
+abbbabbbaabbbabbbbaaaaba
+babababbaabbabbaaabbbbab
+baaaabaaaaabaabaabbaaaba
+ababbaaabbbabbbbabababbabbbbabbb
+babaabababaaabbabababbaaaabaabaa
+bababbaaabbabbabaaababaa
+baaaabaaaabbbbbbabbabbba
+aabbaababaabbbabbabbbbbbbabbbabbaaaaabba
+abbaabbbabbbbbaabbaabbbbbbbbaababababbabababbaab
+ababbbbbabaaaaabbbbaaababbbaabbbaaabaaaabaaaaababaabbbaa
+babbababababaaaaaababbab
+babaaabbabaaaaaabbbbaaaa
+bbbbaaaabbbabbbabaabaabbbbbabbab
+bababbaaabbbaababababaaaabbabbbbbbbaababbabbabba
+ababbbababaaaaababbabaaa
+bbbbaababababaaaababaabb
+baaaabbbaabababababbabba
+aabbbabbaaabbbabbbaaaaabbbabbaabaaaaaaaabbaaaabaabbaabaa
+aabaababaababbabbbbaababaabbbbabaaabbbbbaaabaaabbababbab
+abbabaabbbabbbaaabbaabba
+aababaaaaababaaabbaaaabbabbbbbaaabababaa
+baabbaababbbbaabbabbbaaaabbabaaaaaaabbbabbbaaabaaaabaaabbbaabbaaabbaabbbaabbabaaaaaabaab
+babbbabbbaababbbabbabaaa
+aaababababbbaabbabbabbba
+babbbbbbaaabbaaabbbbbaab
+abbbaabbaaaaabbbbbabbbab
+bbaabababaabbbabbabababa
+bbabbbbabbbaaaabbaabaabaaabbbabbbbbababb
+abbabbabbbbbaabaababbbbbbbababbaabbbbbbaaabaaabbbbaabbba
+bababaabaababaaabbabbbbb
+babbaabbbbaabaabbbaabbbabaabbaaabbbbaaabaabbabba
+bbabbaabababbbbabbbabaaa
+baabbaabaaaaabaabbaaabab
+aaabababbabbbaaabaaaabbaaaabbbaabaaaabbbabbbbbabaaaabaababbbbaab
+baabbbabaabababaaaaabaabaaaaabaaaaaaabbaaabbbaabaabbbbaabaaaabba
+bbaabbaaaabbbaaaabaaabab
+baaaaaaaaabbbababaaaaabbaabbbbbabbaaabab
+aabbaabbabbbaaaabbbabbaaabaabbbbababbaba
+abaabbbaaaabbbaabbaaaabbbaabbbbb
+bbbbabbbaaabaabbaaaaabba
+babbabaabaaababaabaabbabbbaaaaaa
+abbbbaababbbaabbabaaabbbbaaaaababaaabababbbbbaab
+bbaaaabbbbbbaaabbababaabaaabbbaababbbbabaaabbababbbababaaaaaabbbbbababba
+baaaabbbbbbbabbabbaababb
+bbaaabbaabbbaaaabaabbaba
+abaaaaabbbbbaabaaababbbbbbbaaaab
+aaaabbbaababaaabbbbbabbabbaaaabbaababababbbbbababaabbababbbbaaaabbbaaabb
+abaaabbbbbbaaaaabaabbbaa
+aabaababbbabbbbaaaabbbaabbaaaaabaaabaabb
+bababaabbababaabbbaaabaa
+baaaaaabbabaabbbbabaaabbbbabaabb
+bbabbbbbabbabbababbaaabbbabbababbaabbbbbbbbabbaa
+aabbbbbaabbbabbabababbbaaabbbbbaaaabaaab
+bbbabaabaabbbabababbabaababbbbbababbaaaa
+aaaabababaaababbbbbbbababbaabbbbbbbbaabbaababbbbaaababaaabbbaababaabbabbbbbbbbbb
+aaaabaaabbabbabaabbbaaab
+aaaabaabbbbaaaabbaaabaabbababababbbaabaaababbabaaabbabaa
+bbbabaaabaaaabbaabbbbaab
+abbabbbbbbabaaaababbbaabbaaaaababaabbabbbbbaababbabaaaaa
+abbabbaaaaaabababaaabbabaaaaabaabbbaabbaababaaba
+aababbbabaababaaabbbaabbbbbbabaaaabbaababababbaaaaaaababbbbbbabbaababbbaaababbaabbbbabab
+abbaaaabbbaaaaabbaabbaaaaabbabbbbbbabaabaabbabbbbbbabbbaabbababb
+baababbaababbabbbaabbaba
+bbababbaabbaababaaababbabbaaaaabbbabbabaabbbbababbabbbabababaaaa
+aabbbbababababbaabaabbaababbbbba
+abaaaabbaaabbaaabbabbbaa
+abbaaabbabaabbbabababaabbbbaabba
+ababaaababaaabbbabaaabaa
+aabbaabaaabbbbaabaabaaab
+aabaabbbabbaaaaaabbbbabaaabaabbaaaababbbaabbabbabbbbaaaaabbaabaa
+baaabaabbaaaaaaabaaaaaabbababaaaabbbababbbbbaaaa
+aababbbabbabaaabbababaaaabaabaaaabbbaaba
+abbabbbabbbabaaabbabababbbabaaaabbaaaaaaaaabababbbabbbab
+bbbabaaaaaaabbabababbaabaaaaabaaabaabbbabbbabbbabaababbbbbababbbaaaaabbb
+baabababaaaaabbbbbbabbbb
+abbaaabbaaabaabaabaabaab
+abbbbbabbabaaababbabaabbbbabaaaaabbbbaabbaaabababaabaaaabababbbabbabbbaaabbaaabbababbabb
+ababaaababaabbbabbbbaabb
+bbaababaabababbaabbbabbbbbabbabaabaabbaa
+babaabbbababbbbabaaaababbbaaaabababababaabababab
+bbababbabbbbababaabbabaa
+bbaaaabababaababaaaabbbaabaaaaabbaabbbabbbbaabba
+bbabaababbbabaabaabaababababbbaabbbbbaabbbabbaba
+bbababbabbabaaabaaaabbbb
+baababbbbbaabbaaabaabaaa
+abaaaaaaabbaaaababaabaabbbbbaabbbaaababb
+abaaaabbbabbabababbbbaaa
+abbbababaabbaabbbaaabbaabbbabbbbaabbbbbabbbbaabb
+aabbaabbbbabbaaaaabbbbba
+bbbbabbaabaaaabbbaaababbabbababa
+babbbabaaabaaaaaabbbbbabaabbabab
+baaaaaababbbababbbbababa
+baabbaabaabaaaaabaaabaabaaaabaabaabbbbba
+aabaabbbbabbababaaabaabaaabaabaa
+aabbaabbbabbabbbbababaababaaaaabbbaababaabbabbaabbabaaabbbabbaab
+bbabbaabbabaaabaabbbaabbbbbaaaaaaaaabbaaaabaabaa
+babbaaabbabaabbbaababbba
+aaaaabbbbbaaabbaabbabbaabababbbbaaababba
+babbbaaaabaaabbabaaabbabbbabbaabbbababbb
+babbbabbbabbbbaabababbaaabababbbbbaababbbbaabaaabbbbaabb
+bbabbbbbaabbbabbbabaabbbabababaa
+abbbabbabaaabbbbaaaabaaa
+babbbbaabaaaaaababaabbbb
+aaaababababbbaabbbbaabbbbabbaaabbbaaaaaa
+abbbaabbbababaaabaaaaabb
+bbaabbaabbaaabbabbaaabbaabaabaabbaaabbbb
+bababbababbabbbbabababbaaaabaabaaabaaababbaabaabbbabbabbaabbabbbaaaaaaababaaabba
+abbababaaaabaaabbaabbaba
+baaababbbabaaabaaaaabaaaabaaaaababbbbbbbbabbabbbabbbabaabaababbabaaabbaaaaabaaabaabaaabababbbaab
+bbaaabbbabbabbaaabababab
+aabababaabbabbbbbbababbaaaaabbbbabbbbbba
+aaaaaabbaaabababaababaaabaaababb
+abbabaabbbbaaaaaabbaaaba
+abbbababaaabaababaaaaaaababaaaababababbbaabbbbba
+abbabbaababbbbababbaaaabbbbaabbbbabbbabbbabbabba
+bbbaabaaaaabbbaababbaabbbbbabaabbaaababaaaaababb
+bbaaaaababaabaaabaaabbaaabbaababbbbaaaabbbbbbaba
+bbaaaabbabbbbbbbaaaaaabbabbbbbabaababbaabaaabaabbbabaaabbaaabbbabbbabaabaaaabbaaaabaaabb
+abbabbaabbaaabbbbabbbbaabbaabaababaabaaaabbbaaababaabaabaaabaaab
+abbbabaaaabbaaabbbbabbaa
+baabaaaabaaaabbaabaaaaab
+aabbbabaabaaabbbbabbabba
+bbababbabbbaabbbbbbaaaabbaaabbabbbaabaaa
+aaaabbbbbaaaababaabababababaabba
+aabbbabababbbaaaaaabbbbaaaabaaaa
+abbaaaabbababbbaabbabbabababaababbbaaabb
+baaaaaabbbabaaaaabbaabbb
+aaaaaaabbbaaaabaabaaabaa
+aabbbbbbbbabbaabababaaba
+bbbbbbaaaaabbaaaabbaabbb
+bbaaabbbbabaaabbbaaaabaaaabbaabababbbabbabaaaabaabababbb
+abbbbbabaabbbabbbbbababb
+abaababaabbbaabbabbbaababbababbbbbbbbbba
+aabbbabaaaabbaaabbaabbaaabbbbaaa
+aabbabbbaaaabbabababbaba
+aaabbbbababbbaaababaabbbbaabbaba
+aabbbababbabbaaaabbaaaaaaaaaaaaabbbaabbaaabababb
+ababbbabbabaaababbaabbbb
+aabbbabbbaabbbabababbabbabbbabbabaaabbbabaabbbbb
+abbbabbaaabbbababbabbbbbbbbbabaabaaaaabbabbbbababbbababb
+baabaababaaaababbababbbb
+bbaaaaaabaabbbaaaaaabbbaaabbbbabbbaaabbbbbbbbbbbabbbbaaababaabaaaaaaaaabbbabaababaabaabb
+aababbbbabaaababbbabbaaaaaaaaabbaabbbbbaaababababababaababbaabababababbbabbbababbbaabaab
+bbabaabaaabbbbbbbababbaa
+aaababbabbbbababaababaabbbababaabbbabaababaaaabbaabbbaaa
+bbababbaaabbbaaaabbaabbb
+aabbbabaababbbaabbbabaaaaaaabbbabbbbbbaaabbababaabbaaabaabaabbaa
+ababbbaaaabaabbbbbbbbbbb
+abbbabaababbabaababaabba
+aaabbbaababbabaabbbbaababbabbbab
+bbaaaababaaabbbabbaababbababbababaaabaaa
+bbaaabbaabbaababaaaaabbbbaabbbaaabbbbaaa
+aaaaabababbbaaaabbbbbbabbabbbaababbabbaabbbbaabb
+aaabbaaaabbbabaabbbbbabbbbaababbbbbbbbbabbaaaabaabbbabbbaaaabbabbbabbaaaaaaaabbbbbabaaba
+babbbaabbaabaabaaaaabbbabbbbaabaaaabaabbbbabaabb
+abbabbabbabaaabaabbaabaa
+abaaaabbaaaaaaabbaaabbbabbaaabaa
+bbbbbbaababbababababbaba
+bbaaabbaabbbabbbabbaabba
+babaabbbaabaababaabaabba
+ababbbabbabbbaaabababbab
+bbaabbaaaaaaaaabbaabaaaa
+abbbbbabbbbabaaaaaabbbbabbbbbbbabaabbbaaaababbab
+bbbbaababaaabbabababaaba
+babbabaababbaaabaababbaa
+babbbaaaababaaababbbabaaabbbabaaabbbbbba
+bbbaabaababbababbbabaabb
+aababbbbabbabbbbababbbabbbabbababbababab
+baaaabbbbaaabbabbaabaabaaababbaaaaaaaabbbaabbbaaaabaaabb
+aaaaaaaaababbbbbbbbaaaaabababaaabbbbbaaa
+aaaaabababbabaabbabbabaaaaaabaab
+ababbbabbabbbaabbaaababb
+abaaabbababaaaababbabbaaabaaabaa
+babbabbbbabaaabbaabbbbaaabbbabaababbbbbbabaabbabaaabbbba
+aaaaabbbabbabbbbbbaaaaaa
+aaababbabbabaaabbabbabbb
+babaabbbabbbabbbaabbbbbbbaabbaabaababbab
+aaabbaabbaabbbbaaaaabbabbbaaaabbbaabababaaabbbabbababaaabbaababb
+babbbbabababbabbbababbab
+bababbbbbaabaaabaabaaababbaabaabaaaaaaabbbababaaaaabaaba
+aaaaaaaabaaaabbbbbaaabaa
+bbabbbbbaabaaaaaaaaaabaaabaabababbbbbbaaaaababbaaaababbb
+aaabababaababbababbbbbaabbaabbba
+baababababaaabbbbaaabbbb
+ababbbabbaababbbbaaaaaababbbaabbaaaaabaabaabaaaa
+babbaabbaabbaabbbaaaabbbababbbbbbabbbabbaaaababbbaaabaaaaababbaaaaababbbbbbbabbaaaababaa
+aaaaaabbbbabaababbbaaababbababaa
+babbbbaababbaabbabbbbaba
+bbaabbaaaaaabbbbabababbbbbabbbbbbaaabaaaabbabbbabbabbaaaaaaababa
+ababbbaababbbaaaaabaabaa
+baaaabbbbbbbabbaabbabaaa
