@@ -29,7 +29,7 @@ case class ComposedRule(
     var offset = 0
     var parts = mutable.Seq[String]()
     rules.foreach { r =>
-      parts += in.substring(offset, offset + r.size)
+      parts :+= in.substring(offset, offset + r.size)
       offset += r.size
     }
     val iterator = parts.iterator
