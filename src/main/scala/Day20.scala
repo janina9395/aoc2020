@@ -43,7 +43,7 @@ case class Tile(number: Int, data: Seq[Seq[Char]]) {
   def trimBorders: Tile = {
     Tile(
       number,
-      data.slice(1, data.length - 2).map(_.slice(0, data.length - 2))
+      data.slice(1, data.length - 1).map(_.slice(1, data.length - 1))
     )
   }
 }
@@ -153,14 +153,12 @@ object Day20 extends App {
       val row = rowTiles.map(_.trimBorders)
       val merged =
         row.head.data.indices.map(i => row.flatMap(_.data(i)).mkString(""))
-//      println(merged.mkString("\n"))
       merged
     }
   }
 
-  // Fix me
   def part2(tiles: Seq[Tile]) = {
-    val image = arrange(tiles)
+    val image = Tile(0, arrange(tiles).map(_.toCharArray.toSeq).toSeq)
     val monster = """                  # 
                     |#    ##    ##    ###
                     | #  #  #  #  #  #   """.stripMargin
@@ -168,11 +166,11 @@ object Day20 extends App {
       .map(_.toCharArray)
 
     val monsterPattern = monster.map(_.count(_ == '#')).sum
+    val imagePattern = image.data.map(_.count(_ == '#')).sum
 
-    Tile(0, image.map(_.toCharArray.toSeq).toSeq).allPositions
+    image.allPositions
       .map { im =>
         var count = 0
-        val data = im.data.map(_.toArray).toArray
 
         for (
           i <- 0 to im.data.length - monster.length;
@@ -185,20 +183,18 @@ object Day20 extends App {
               im.data(i + mr)(j + mc) == monster(mr)(mc)
             ) {
               matching += 1
-              data(i + mr)(j + mc) = 'O'
             }
           }
-          //println(s"Matching $matching")
 
-          if (matching == monsterPattern)
+          if (matching == monsterPattern) {
             count += 1
+          }
         }
 
-//        println(s"Debug: $count -> ${data.map(_.count(_ == '#')).sum}")
-        count -> data.map(_.count(_ == '#')).sum
+        count -> (imagePattern - count * monsterPattern)
       }
       .find { case (count, _) =>
-        count == 2
+        count > 0
       }
       .map { case (_, res) =>
         res
@@ -211,8 +207,7 @@ object Day20 extends App {
   assert(part1(sample) == 20899048083289L)
   println(s"Part 1 answer: ${part1(tiles)}")
 
-  println(part2(sample))
-  //assert(part2(sample).contains(273))
+  assert(part2(sample).contains(273))
   println(s"Part 2 answer: ${part2(tiles)}")
 
 }
