@@ -37,7 +37,7 @@ object Day21 extends App {
     allergenMap
   }
 
-  def part1(food: Seq[Food]) = {
+  def part1(food: Seq[Food]): Int = {
     val allergenToIng = findAllergenMap(food)
 
     val unsafeIng = allergenToIng.values.flatten.toSet
@@ -53,7 +53,9 @@ object Day21 extends App {
         allergenMap: Map[String, Set[String]],
         resolved: Map[String, String]
     ): Map[String, String] = {
-      val nextResolved =
+
+      // find 1 to 1 mapping between allergen and ingredient
+      def findNextResolved(): Option[(String, String)] = {
         allergenMap
           .find { case (aller, ingSet) =>
             ingSet.size == 1 && !resolved.contains(aller)
@@ -61,9 +63,11 @@ object Day21 extends App {
           .map { case (aller, ingSet) =>
             aller -> ingSet.head
           }
+      }
 
-      nextResolved match {
+      findNextResolved() match {
         case Some((aller, ing)) =>
+          // exclude resolved ingredient from all other allergen lists
           val updated = allergenMap.map { case (aller, ings) =>
             aller -> (ings - ing)
           }
@@ -74,12 +78,15 @@ object Day21 extends App {
       }
     }
 
-    val allergenMap = findAllergenMap(food)
-    val unsafeIngredientsMap = resolve(allergenMap, Map.empty)
+    // ingredient to allergen 1 to 1 mapping
+    val unsafeIngredientsMap = resolve(
+      findAllergenMap(food),
+      resolved = Map.empty
+    )
 
     unsafeIngredientsMap.toSeq
-      .sortBy(_._2)
-      .map(_._1)
+      .sortBy(_._2) // allergen
+      .map(_._1) // ingredient
       .mkString(",")
   }
 
