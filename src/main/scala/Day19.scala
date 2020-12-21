@@ -25,9 +25,9 @@ case class ComposedRule(
     rules match {
       case Nil => offset == in.length // we are here only if prev rules have been passed
       case (r: InfiniteRule) :: rest =>
-        (offset to in.length by r.size).exists { len =>
+        (offset + r.size to in.length by r.size).exists { len =>
           if (r.matches(in.substring(offset, len)))
-            matchRules(in, offset + len, rest)
+              matchRules(in, len, rest)
           else
             false
         }
@@ -158,7 +158,6 @@ object Day19 extends App {
   assert(part1("sample_day19", "sample_day19_rules") == 2)
   println(s"Part1: ${part1("input_day19", "input_day19_rules")}")
 
-  println("Part 2 sample:" + part2("sample_day19_2", "sample_day19_rules_2"))
   assert(part2("sample_day19_2", "sample_day19_rules_2") == 12)
   println(s"Part2: ${part2("input_day19", "input_day19_rules")}")
 
