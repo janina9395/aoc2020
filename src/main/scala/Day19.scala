@@ -1,5 +1,3 @@
-import scala.collection.mutable
-
 sealed trait InputRule {
   def number: Int
 }
@@ -9,9 +7,7 @@ sealed trait RuleMatcher {
   def size: Int
 }
 
-case class StringRule(number: Int, s: String)
-    extends InputRule
-    with RuleMatcher {
+case class StringRule(number: Int, s: String) extends InputRule with RuleMatcher {
   override def matches(in: String): Boolean = in == s
   override def size: Int = 1
 }
@@ -25,24 +21,54 @@ case class ComposedRule(
     right: Seq[RuleMatcher]
 ) extends RuleMatcher {
 
-  private def matches(in: String, rules: Seq[RuleMatcher]): Boolean = {
-    var offset = 0
-    var parts = mutable.Seq[String]()
-    rules.foreach { r =>
-      parts :+= in.substring(offset, offset + r.size)
-      offset += r.size
+  def matchRules(in: String, offset: Int, rules: List[RuleMatcher]): Boolean = {
+    rules match {
+      case Nil => offset == in.length // we are here only if prev rules have been passed
+      case (r: InfiniteRule) :: rest =>
+        (offset to in.length by r.size).exists { len =>
+          if (r.matches(in.substring(offset, len)))
+            matchRules(in, offset + len, rest)
+          else
+            false
+        }
+      case r :: rest =>
+        if (r.matches(in.substring(offset, offset + r.size)))
+          matchRules(in, offset + r.size, rest)
+        else
+          false
     }
-    val iterator = parts.iterator
-    offset == in.length && rules.forall(
-      iterator.hasNext && _.matches(iterator.next())
-    )
+  }
+
+  private def matches(in: String, rules: Seq[RuleMatcher]): Boolean = {
+    matchRules(in, 0, rules.toList)
   }
 
   override def matches(in: String): Boolean = {
-    matches(in, left) || matches(in, right)
+    matches(in, left) || (right.nonEmpty && matches(in, right))
   }
 
   override def size: Int = left.map(_.size).sum
+}
+
+case class InfiniteRule(
+    number: Int,
+    rules: Seq[RuleMatcher]
+) extends RuleMatcher {
+
+  override def matches(in: String): Boolean = {
+    val n = in.length / size
+    rules.toList match {
+      case r1 :: Nil =>
+        ComposedRule(0, left = Array.fill[RuleMatcher](n)(r1).toSeq, Seq.empty)
+          .matches(in)
+      case r1 :: r2 :: Nil =>
+        val repeated1 = Array.fill[RuleMatcher](n)(r1).toSeq
+        val repeated2 = Array.fill[RuleMatcher](n)(r2).toSeq
+        ComposedRule(0, left = repeated1 ++ repeated2, Seq.empty).matches(in)
+    }
+  }
+
+  override def size: Int = rules.map(_.size).sum
 }
 
 object Day19 extends App {
@@ -79,10 +105,12 @@ object Day19 extends App {
       allRules: Map[Int, InputRule]
   ): RuleMatcher = {
 
+    def resolveOne(ruleNumber: Int): Option[RuleMatcher] = {
+      allRules.get(ruleNumber).map(resolveRule(_, allRules))
+    }
+
     def resolve(ruleNumbers: Seq[Int]): Seq[RuleMatcher] = {
-      ruleNumbers
-        .flatMap(allRules.get)
-        .map(resolveRule(_, allRules))
+      ruleNumbers.flatMap(resolveOne)
     }
 
     rule match {
@@ -90,7 +118,11 @@ object Day19 extends App {
       case IntRule(num, rules, Nil) =>
         ComposedRule(num, resolve(rules), Seq.empty)
       case IntRule(num, rules, altRules) =>
-        ComposedRule(num, resolve(rules), resolve(altRules))
+        if (altRules.contains(num)) { // the only case we have
+          InfiniteRule(num, resolve(rules))
+        } else {
+          ComposedRule(num, resolve(rules), resolve(altRules))
+        }
     }
   }
 
@@ -106,7 +138,6 @@ object Day19 extends App {
     inputs.count(ruleZero.matches)
   }
 
-  // Causes infinite loop
   def part2(filename: String, ruleFile: String): Int = {
     val allRules = (
       FileReader.read[InputRule](ruleFile) ++
@@ -116,14 +147,19 @@ object Day19 extends App {
       .toMap
 
     val inputs = FileReader.readLines(filename)
-    val ruleZero = resolveRule(allRules(0), allRules)
+    lazy val ruleZero = resolveRule(allRules(0), allRules)
 
-    inputs.count(s => ruleZero.matches(s))
+    inputs.count(s => {
+      val res = ruleZero.matches(s)
+      res
+    })
   }
 
-  assert(part1("sample_day18", "sample_day18_rules") == 2)
+  assert(part1("sample_day19", "sample_day19_rules") == 2)
+  println(s"Part1: ${part1("input_day19", "input_day19_rules")}")
 
-  println(s"Part1: ${part1("input_day18", "input_day18_rules")}")
-  //println(s"Part2: ${part2("input_day18", "input_day18_rules")}")
+  println("Part 2 sample:" + part2("sample_day19_2", "sample_day19_rules_2"))
+  assert(part2("sample_day19_2", "sample_day19_rules_2") == 12)
+  println(s"Part2: ${part2("input_day19", "input_day19_rules")}")
 
 }
