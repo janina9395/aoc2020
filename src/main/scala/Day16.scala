@@ -14,12 +14,12 @@ case class TicketRule(name: String, range1: Range, range2: Range) {
 object Day16 extends App {
 
   type Ticket = Seq[Int]
-  implicit val ticketMapper: Mapper[Ticket] = _.split(",").map(_.toInt).toSeq
+  implicit val ticketParser: Parser[Ticket] = _.split(",").map(_.toInt).toSeq
 
-  implicit val ruleMapper: Mapper[TicketRule] = new Mapper[TicketRule]() {
+  implicit val ruleParser: Parser[TicketRule] = new Parser[TicketRule]() {
     val ruleRegex = """([a-z ]+): (\d+)-(\d+) or (\d+)-(\d+)""".r
 
-    override def map(line: String): TicketRule = {
+    override def parse(line: String): TicketRule = {
         line match {
           case ruleRegex(name, s1, e1, s2, e2) =>
             TicketRule(name, s1.toInt to e1.toInt, s2.toInt to e2.toInt)

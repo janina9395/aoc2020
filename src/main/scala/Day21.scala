@@ -5,10 +5,10 @@ case class Food(ingredients: Seq[String], allergens: Seq[String])
 
 object Day21 extends App {
 
-  implicit val foodParser: Mapper[Food] = new Mapper[Food] {
+  implicit val foodParser: Parser[Food] = new Parser[Food] {
     private val foodReg = """(.*) \(contains (.*)\)""".r
 
-    override def map(line: String): Food = {
+    override def parse(line: String): Food = {
       line.trim match {
         case foodReg(ingredients, allergens) =>
           Food(

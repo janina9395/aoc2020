@@ -73,13 +73,13 @@ case class InfiniteRule(
 
 object Day19 extends App {
 
-  implicit val ruleMapper = new Mapper[InputRule] {
+  implicit val ruleParser = new Parser[InputRule] {
     val ruleRegex = """(\d+): ([\d+ ]+) ?\|? ?([\d+ ]+)?""".r
     val letterRegex = """(\d+): "([ab])"""".r
     val parseRuleNumbers: String => Seq[Int] =
       s => s.trim.split(" ").filterNot(_.isEmpty).map(_.toInt).toSeq
 
-    override def map(line: String): InputRule = {
+    override def parse(line: String): InputRule = {
       line.trim match {
         case letterRegex(num, ch) =>
           StringRule(num.toInt, ch)
@@ -141,7 +141,7 @@ object Day19 extends App {
   def part2(filename: String, ruleFile: String): Int = {
     val allRules = (
       FileReader.read[InputRule](ruleFile) ++
-        Seq("8: 42 | 42 8", "11: 42 31 | 42 11 31").map(ruleMapper.map)
+        Seq("8: 42 | 42 8", "11: 42 31 | 42 11 31").map(ruleParser.parse)
     )
       .map(r => (r.number, r))
       .toMap

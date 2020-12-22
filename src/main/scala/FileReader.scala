@@ -1,7 +1,7 @@
 import scala.io.Source
 
-trait Mapper[A] {
-  def map(line: String): A
+trait Parser[A] {
+  def parse(string: String): A
 }
 
 object FileReader {
@@ -10,11 +10,20 @@ object FileReader {
     read[String](fileName)(identity)
   }
 
-  def read[A: Mapper](filename: String): Seq[A] = {
+  def readBlocks(fileName: String): Seq[String] = {
+    Source
+      .fromResource(fileName)
+      .getLines
+      .map(_.trim)
+      .mkString("\n")
+      .split("\n\n")
+  }
+
+  def read[A: Parser](filename: String): Seq[A] = {
     Source
       .fromResource(filename)
       .getLines
       .toSeq
-      .map(implicitly[Mapper[A]].map(_))
+      .map(implicitly[Parser[A]].parse(_))
   }
 }
