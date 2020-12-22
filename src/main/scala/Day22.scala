@@ -59,7 +59,7 @@ object Day22 extends App {
     FileReader.readBlocks(filename).map(playerParser.parse)
 
 
-  def part1(players: Seq[Player]): Long = {
+  def part1(players: Seq[Player]): Int = {
     val me = players.head
     val crab = players.last
 
@@ -74,7 +74,7 @@ object Day22 extends App {
   }
 
 
-  def part2(players: Seq[Player]): Long = {
+  def part2(players: Seq[Player]): Int = {
 
     def playRound(me: Player, crab: Player): Player = {
       val (myCard, otherCard) = (me.drawTopCard(), crab.drawTopCard())
