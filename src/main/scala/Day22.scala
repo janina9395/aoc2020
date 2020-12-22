@@ -107,7 +107,7 @@ object Day22 extends App {
     }
 
     def recursiveCombat(me: Player, crab: Player): Player = {
-      var roundsMem = Set[Seq[Int]]()
+      var roundsMem = Set[Int]()
       var roundWinner = me
 
       while (true) {
@@ -118,12 +118,11 @@ object Day22 extends App {
             return me
         }
 
-        if (roundsMem.contains(me.cards.toSeq) && roundsMem.contains(crab.cards.toSeq)) {
+        if (roundsMem.contains((me.cards, crab.cards).hashCode())) {
           val player1 = if (me.number == 1) me else crab
           return player1
         } else {
-          roundsMem += me.cards.toSeq
-          roundsMem += crab.cards.toSeq
+          roundsMem += (me.cards, crab.cards).hashCode()
           roundWinner = playRound(me, crab)
         }
       }
