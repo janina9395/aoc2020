@@ -1,72 +1,66 @@
-import scala.collection.mutable.{ArrayBuffer, ListBuffer}
+class Item(val value: Int, var next: Item)
 
 object Day23 extends App {
 
-  def run(items: Seq[Int], moves: Int) = {
-    def index(ind: Int, length: Int) = {
-      if (ind >= length) ind % length else ind
-    }
+  def run(input: Seq[Int], moves: Long): Array[Item] = {
 
-    def dst(cur: Int, items: ArrayBuffer[Int], dropped: Seq[Int]): Int = {
+    def findDest(cur: Item, items: Array[Item], dropped: Seq[Item], indexes: Map[Int, Int]): Item = {
       var min = 1
-      var max = items.length + dropped.length
+      var max = items.length
 
-      while(dropped.contains(min)) min += 1
-      while(dropped.contains(max)) max -= 1
+      while (dropped.exists(_.value == min)) min += 1
+      while (dropped.exists(_.value == max)) max -= 1
 
-      var t = cur - 1
+      var t = cur.value - 1
       if (t < min) t = max
-      while (dropped.contains(t)) {
+      while (dropped.exists(_.value == t)) {
         t -= 1
         if (t < min)
           t = max
       }
-      t
+
+      items(indexes(t))
     }
 
-    def move(cur: Int, items: ArrayBuffer[Int]) = {
-      val curIndex = index(items.indexOf(cur), items.length)
+    def move(cur: Item, items: Array[Item], indexes: Map[Int, Int]): Unit = {
+      val dropped = Seq(cur.next, cur.next.next, cur.next.next.next)
+      val dest = findDest(cur, items, dropped, indexes)
 
-      val dropped = (1 to 3).map(i => items(index(curIndex + i, items.length)))
-      dropped.foreach { item =>
-        items.remove(items.indexOf(item))
-      }
-
-//      val len = items.length
-//      val dropped = (1 to 3).map(i =>
-//        items.remove(index(curIndex + 1, len + 1 - i))
-//      )
-
-      //println(s"Pick up: ${dropped.mkString(", ")}")
-      val dest = dst(cur, items, dropped)
-      //println(s"Destination: $dest")
-      val dstIndex = items.indexOf(dest)
-
-      val (prefix, suffix) = items.splitAt(dstIndex)
-
-      suffix.remove(0)
-      (prefix :+ dest) ++ dropped ++ suffix
+      val oldDestNext = dest.next
+      val newCurNext = dropped.last.next
+      dest.next = dropped.head
+      dropped.last.next = oldDestNext
+      cur.next = newCurNext
     }
 
-    var it = ArrayBuffer.from(items)
-    var cur = it.head
-    (0 until moves).foreach { i =>
+    val items = Array.from(input.map(new Item(_, null)))
+    val indexes = items.map(_.value).zipWithIndex.toMap
+    for (i <- 0 until items.length - 1) {
+        items(i).next = items(i + 1)
+    }
+    items.last.next = items.head
+
+    var cur = items.head
+    (0L until moves).foreach { i =>
       println(s"-- Move ${i + 1} --")
-      //println(s"Cups: ${it.mkString(", ")}")
-      //println(s"Current: $cur")
-      it = move(cur, it)
-      cur = it(index(it.indexOf(cur) + 1, it.length))
+      move(cur, items, indexes)
+      cur = cur.next
     }
-    //println(s"Final: ${it.mkString(",")}")
-    it
+    items
   }
 
-  def part1(items: Seq[Int], moves: Int = 100): String = {
+  def part1(items: Seq[Int], moves: Int): String = {
 
-    def result(items: ArrayBuffer[Int]): String = {
-      val (prefix, suffix) = items.splitAt(items.indexOf(1))
-      suffix.remove(0)
-      (suffix ++ prefix).mkString("")
+    def result(items: Array[Item]): String = {
+      val start = items.find(_.value == 1).get
+      var cur = start.next
+
+      val res = new StringBuilder("")
+      do {
+        res ++= cur.value.toString
+        cur = cur.next
+      } while (cur != start)
+      res.result()
     }
 
     val res = run(items, moves)
@@ -75,11 +69,10 @@ object Day23 extends App {
 
 
   def part2(items: Seq[Int]): Long = {
-    val res = run(items ++ (items.length to 1_000_000), moves = 10_000_000)
-    val i = res.indexOf(1)
+    val res = run(items ++ (items.length + 1 to 1_000_000), moves = 10_000_000L)
+    val i = res.find(_.value == 1).get
 
-    res((i + 1) % res.length).toLong * res((i + 2) % res.length).toLong
-
+    i.next.value.toLong * i.next.next.value.toLong
   }
 
   def parseAsInts(input: String): Seq[Int] = {
@@ -87,14 +80,13 @@ object Day23 extends App {
   }
 
   val sample = parseAsInts("389125467")
-  println(sample)
   assert(part1(sample, moves = 10) == "92658374")
   assert(part1(sample, moves = 100) == "67384529")
 
   val input = parseAsInts("253149867")
-  println(s"Part 1 answer: ${part1(input)}")
+  println(s"Part 1 answer: ${part1(input, moves = 100)}")
 
-  //assert(part2(sample) == 149245887792L)
+  assert(part2(sample) == 149245887792L)
   println(s"Part 2 answer: ${part2(input)}")
 
 }
