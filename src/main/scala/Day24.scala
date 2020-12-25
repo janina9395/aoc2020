@@ -13,31 +13,58 @@ object Day24 extends App {
     }
   }
 
-  def part1(tileDirections: Seq[Seq[String]]): Int = {
-    // from https://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/AV0405/MARTIN/Hex.pdf
-    val step = Map(
-      "e" -> Pos(-1, -1, 0),
-      "se" -> Pos(0, -1, -1),
-      "sw" -> Pos(1, 0, -1),
-      "w" -> Pos(1, 1, 0),
-      "nw" -> Pos(0, 1, 1),
-      "ne" -> Pos(-1, 0, 1)
-    )
+  // from https://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/AV0405/MARTIN/Hex.pdf
+  val step = Map(
+    "e" -> Pos(-1, -1, 0),
+    "se" -> Pos(0, -1, -1),
+    "sw" -> Pos(1, 0, -1),
+    "w" -> Pos(1, 1, 0),
+    "nw" -> Pos(0, 1, 1),
+    "ne" -> Pos(-1, 0, 1)
+  )
 
+  private def getBlackTiles(tileDirections: Seq[Seq[String]]) = {
     val start = Pos(0, 0, 0)
     val tiles = tileDirections
-      .map ( directions =>
+      .map(directions =>
         directions.map(dir => step(dir))
           .foldLeft(start)(_ + _)
       )
 
     tiles
       .groupMapReduce(identity)(_ => 1)(_ + _)
-      .count(_._2 % 2 == 1)
+      .filter(_._2 % 2 == 1)
+  }
+
+  def part1(tileDirections: Seq[Seq[String]]): Int = {
+    getBlackTiles(tileDirections).size
+  }
+
+  def runDay(blackTiles: Set[Pos]): Set[Pos] = {
+
+    def neighbours(tile: Pos) = step.values.map(tile + _)
+
+    val whiteTiles = blackTiles.filter { t =>
+      val adjBlack = neighbours(t).count(blackTiles.contains)
+      adjBlack == 0 || adjBlack >= 2
+    }
+
+    val newBlack = blackTiles.flatMap(neighbours).filter { t =>
+      val adjBlack = neighbours(t).count(blackTiles.contains)
+      adjBlack == 2
+    }
+
+    blackTiles.diff(whiteTiles) ++ newBlack
   }
 
   def part2(directions: Seq[Seq[String]]): Int = {
-    ???
+    var blackTiles = getBlackTiles(directions).keySet
+
+    (1 to 100).foreach { _ =>
+      blackTiles = runDay(blackTiles)
+    }
+
+    blackTiles.size
   }
 
 
@@ -47,7 +74,7 @@ object Day24 extends App {
   val input = FileReader.read[Seq[String]]("input_day24")
   println(s"Part 1 answer: ${part1(input)}")
 
-  //assert(part2(sample) == 2208)
+  assert(part2(sample) == 2208)
   println(s"Part 2 answer: ${part2(input)}")
 
 }
